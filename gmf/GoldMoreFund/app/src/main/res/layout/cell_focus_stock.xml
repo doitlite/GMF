@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/gmf_white">
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/indicator_hold_stock"/>
+
+    <TextView
+        android:id="@+id/label_stock_name_and_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:lineSpacingExtra="2dp"
+        android:text="罗牛山\n000735"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/label_float"
+        android:layout_width="76dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@color/gmf_red"
+        android:gravity="center"
+        android:text="+2.14%"
+        android:textColor="@color/gmf_white"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/label_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="120dp"
+        android:text="6.68"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>

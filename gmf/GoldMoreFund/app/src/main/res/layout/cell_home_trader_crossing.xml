@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="168dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/sel_trader_card_bg">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_avatar"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        app:actualImageScaleType="fitCenter"
+        app:placeholderImage="@mipmap/ic_trader_avatar_placeholder"
+        app:placeholderImageScaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/img_avatar"
+        android:singleLine="true"
+        android:text="小超人"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/label_introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_name"
+        android:layout_alignRight="@id/label_name"
+        android:layout_below="@id/label_name"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="3"
+        android:text="福布斯中国十佳资产管理公司研究总监；大型保险公司首席投资经理"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_extra_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_name"
+        android:layout_alignRight="@id/label_name"
+        android:layout_below="@id/label_introduction"
+        android:layout_marginTop="4dp"
+        android:text="还没有创建组合"
+        android:textSize="12sp"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_tag"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        app:actualImageScaleType="fitCenter"/>
+
+</RelativeLayout>

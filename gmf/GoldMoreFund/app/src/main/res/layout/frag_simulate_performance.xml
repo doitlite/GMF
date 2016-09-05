@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/section_cn_invest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/section_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gmf_white"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:id="@+id/img_cn_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="16dp"
+                            android:background="@mipmap/bg_rank">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="排名\n99"
+                                android:textSize="20sp"/>
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/label_win_percent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:lineSpacingExtra="5dp"
+                                android:text="63.34%\n历史胜率"
+                                android:textColor="@color/gmf_text_red"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/label_total_income_percent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:lineSpacingExtra="5dp"
+                                android:text="-36.57%\n总收益"
+                                android:textColor="@color/gmf_text_green"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/label_trade_count"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:lineSpacingExtra="5dp"
+                                android:text="260\n月交易(次)"
+                                android:textColor="@color/gmf_text_blue"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"/>
+
+                        <TextView
+                            android:id="@+id/label_chart_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="20dp"
+                            android:text="模拟业绩曲线"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+                        <com.yale.ui.mkchart.charts.CombinedChart
+                            android:id="@+id/cn_combined_chart"
+                            android:layout_width="match_parent"
+                            android:layout_height="186dp"
+                            android:layout_marginTop="16dp"/>
+
+                        <Button
+                            style="@style/GMFRoundButton.Yellow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="25dp"
+                            android:text="查看交易详情"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="120dp"
+                    android:layout_marginTop="16dp"
+                    android:text="数据仅代表模拟交易记录，不构成投资建议"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/layer_loading"/>
+
+    <include layout="@layout/layer_reload"/>
+
+</FrameLayout>

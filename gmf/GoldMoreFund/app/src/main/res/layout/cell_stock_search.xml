@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/gmf_act_bg">
+
+    <TextView
+        android:id="@+id/label_stock_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:text="罗牛山"
+        android:textColor="#4C5052"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/label_stock_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_stock_name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:text="000065"
+        android:textColor="#9CA2A7"
+        android:textSize="10sp"/>
+
+
+    <Button
+        android:id="@+id/btn_stock_focus"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/sel_round_button_grey_stroke_bg"
+        android:clickable="true"
+        android:singleLine="true"
+        android:text="+自选"
+        android:textColor="#9CA2A7"
+        android:textSize="12sp"/>
+
+    <View
+        style="@style/SepLineHorizontal"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="34dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:text="好友/时间"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="120dp"
+            android:text="奖励/操作"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="44dp"
+            android:text="状态"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+    </FrameLayout>
+</merge>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/gmf_white"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label_position"
+        android:layout_width="28dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="20"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/img_rank"
+        android:layout_width="28dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"/>
+
+    <com.goldmf.GMFund.widget.UserAvatarView
+        android:id="@+id/img_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="52dp"
+        app:placeholderImage="@mipmap/ic_avatar_placeholder"
+        app:roundAsCircle="true"/>
+
+    <TextView
+        android:id="@+id/label_user_name_and_feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="110dp"
+        android:text="股神在世\n2015/12/01 卖出 中国核电"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/label_point_and_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:lineSpacingExtra="2dp"
+        android:text="100%\n胜率"
+        android:textColor="@color/gmf_text_red"
+        android:textSize="18sp"/>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_centerInParent="true"
+            android:text="充值到沪深账户" />
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/section_notification" />
+
+            <com.goldmf.GMFund.widget.BindCNCardInfoCell
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/field_amount"
+                style="@style/GMFEditText.Round"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:ellipsize="start"
+                android:hint="请输入充值金额,最低100元"
+                android:imeOptions="actionDone"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/btn_recharge"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="充值"
+                android:textSize="@dimen/gmf_button_text_size_large"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/InsuranceGuaranteeLabel"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="24dp" />
+    </FrameLayout>
+
+</LinearLayout>

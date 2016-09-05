@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_focus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/ic_focus_placeholder"
+        app:placeholderImageScaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_invested_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="已为 217 人次投资管理"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/label_invested_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="13,983,996元"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/label_total_trader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_total_trader"
+                android:drawablePadding="8dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="4位操盘手"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="10sp"
+                app:layout_widthPercent="50%"/>
+
+            <TextView
+                android:id="@+id/label_total_fund"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/label_total_trader"
+                android:drawableLeft="@mipmap/ic_total_fund"
+                android:drawablePadding="8dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="累计创建12个组合"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="10sp"
+                app:layout_widthPercent="50%"/>
+
+            <TextView
+                android:id="@+id/label_max_income_ratio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_total_trader"
+                android:drawableLeft="@mipmap/ic_max_income_ratio"
+                android:drawablePadding="8dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="最高收益49.37%"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="10sp"
+                app:layout_widthPercent="50%"/>
+
+            <TextView
+                android:id="@+id/label_runnging_fund"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_total_fund"
+                android:layout_toRightOf="@id/label_max_income_ratio"
+                android:drawableLeft="@mipmap/ic_runnging_fund"
+                android:drawablePadding="8dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="3个组合运行中"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="10sp"
+                app:layout_widthPercent="50%"/>
+        </android.support.percent.PercentRelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

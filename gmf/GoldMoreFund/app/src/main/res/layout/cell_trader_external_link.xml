@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/label_bg_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sel_cell_bg_default">
+
+        <ImageButton
+            android:id="@+id/img_arrow"
+            android:layout_width="@dimen/gmf_list_cell_height"
+            android:layout_height="@dimen/gmf_list_cell_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:src="@mipmap/ic_arrow_right_dark"/>
+
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:layout_toLeftOf="@id/img_arrow"
+            android:text="专访: 首操回忆录 | 给你一个从地点起飞的机会!"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/label_bg_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/ic_focus_placeholder"
+        app:viewAspectRatio="2.5"
+        android:visibility="gone"/>
+
+</RelativeLayout>

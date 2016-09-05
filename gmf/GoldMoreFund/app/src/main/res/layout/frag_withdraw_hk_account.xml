@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_yellow">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_centerInParent="true"
+            android:text="提现"
+            android:textColor="@color/gmf_text_black"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/gmf_yellow">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_recharge_or_withdraw_dark"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/bg_recharge_or_withdraw"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cell_coin_unit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gmf_list_cell_height"
+                android:background="@color/gmf_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="提取币种"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="16sp"/>
+
+                <ImageButton
+                    android:id="@+id/img_arrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:src="@mipmap/ic_arrow_right_dark"/>
+
+                <TextView
+                    android:id="@+id/label_money_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/img_arrow"
+                    android:background="@color/gmf_red"
+                    android:drawableLeft="@mipmap/ic_money_hk"
+                    android:drawablePadding="4dp"
+                    android:padding="4dp"
+                    android:text="港币"
+                    android:textColor="@color/gmf_text_white"
+                    android:textSize="12sp"/>
+
+
+                <View style="@style/BorderLineHorizontal"/>
+
+                <View
+                    style="@style/BorderLineHorizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_cashier_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:extraTitle="恒生银行 HangSengBank"
+                app:extraTitleColor="@color/gmf_text_red"
+                app:hideArrow="true"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:lineTop="true"
+                app:title="收款银行"/>
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_cashier_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:extraTitle="Shangwenhuan"
+                app:extraTitleColor="@color/gmf_text_red"
+                app:hideArrow="true"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:title="收款人姓名"/>
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_cashier_card_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:extraTitle="012 67608014549"
+                app:extraTitleColor="@color/gmf_text_red"
+                app:hideArrow="true"
+                app:lineBottom="true"
+                app:title="银行账户"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gmf_list_cell_height"
+                android:layout_marginTop="20dp"
+                android:background="@color/gmf_white">
+
+                <TextView
+                    android:id="@+id/label_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="￥"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:id="@+id/btn_balance"
+                    style="@style/GMFPlainButton.Blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="全部余额"
+                    android:textSize="@dimen/gmf_button_text_size_small"/>
+
+                <EditText
+                    android:id="@+id/field_amount"
+                    style="@style/GMFEditText"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/btn_balance"
+                    android:layout_toRightOf="@id/label_symbol"
+                    android:ellipsize="start"
+                    android:hint="本次最多提现 12,000.00元"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:padding="0px"/>
+
+                <View
+                    style="@style/BorderLineHorizontal"/>
+
+                <View
+                    style="@style/BorderLineHorizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:text="手续费依据各银行收取为准  查看手续费指引"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"/>
+
+            <com.goldmf.GMFund.widget.ProgressButton
+                android:id="@+id/btn_withdraw"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
+                app:buttonTheme="yellow"
+                app:textSize="@dimen/gmf_button_text_size_large"
+                app:text_for_loading="正在申请提现..."
+                app:text_for_normal="提现"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="88dp"
+                android:drawableLeft="@mipmap/ic_sina_mini"
+                android:drawablePadding="4dp"
+                android:text="资金安全由新浪支付提供第三方托管"
+                android:textColor="@color/gmf_text_light_grey"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_marginBottom="48dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/section_left_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/gmf_white"
+            android:orientation="vertical">
+
+            <View
+                style="@style/BorderLineHorizontal"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/group_bottom_button"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <com.goldmf.GMFund.widget.MainTabView
+                    android:id="@+id/tab_home"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:gmf_icon="@drawable/sel_tab_main_home"
+                    app:title="首页" />
+
+                <com.goldmf.GMFund.widget.MainTabView
+                    android:id="@+id/tab_stock"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:gmf_icon="@drawable/sel_tab_main_stock"
+                    app:title="股票" />
+
+                <com.goldmf.GMFund.widget.MainTabView
+                    android:id="@+id/tab_invest"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:gmf_icon="@drawable/sel_tab_main_invest"
+                    app:title="投资" />
+
+                <com.goldmf.GMFund.widget.MainTabView
+                    android:id="@+id/tab_topic"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:gmf_icon="@drawable/sel_tab_main_topic"
+                    app:title="社区" />
+
+                <com.goldmf.GMFund.widget.MainTabView
+                    android:id="@+id/tab_mine"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:gmf_icon="@drawable/sel_tab_main_mine"
+                    app:title="我" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="56dp"
+            android:background="@color/gmf_act_bg" />
+
+        <ImageView
+            android:id="@+id/img_regist_guide"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="66dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/frame_regist" />
+
+    </FrameLayout>
+</LinearLayout>

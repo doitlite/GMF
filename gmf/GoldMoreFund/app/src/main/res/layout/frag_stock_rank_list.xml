@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="渔业"/>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header_stock_rank_list"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/gmf_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="股票/代码"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+                <RelativeLayout
+                    android:id="@+id/area_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="128dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/label_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最新价"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/label_price"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/label_price"
+                        android:src="@drawable/ic_menu_drop"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/area_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/label_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="涨跌幅"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/label_change"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/label_change"
+                        android:src="@drawable/ic_menu_drop"/>
+                </RelativeLayout>
+
+
+                <View
+                    style="@style/SepLineHorizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layer_loading"/>
+
+        <include layout="@layout/layer_reload"/>
+    </FrameLayout>
+</LinearLayout>

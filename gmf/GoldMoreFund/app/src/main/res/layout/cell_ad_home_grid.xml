@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    tools:layout_marginTop="25dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sel_cell_bg_transparent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        app:placeholderImage="@mipmap/ic_promotion_placeholder" />
+
+    <TextView
+        android:id="@+id/label_title_and_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"
+        tools:text="邀请好友" />
+</RelativeLayout>

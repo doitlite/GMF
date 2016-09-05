@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sel_fund_card_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/card_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/label_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:textColor="#80000000"
+                    android:textSize="16sp"
+                    tools:text="234\n累计投资人次" />
+
+                <TextView
+                    android:id="@+id/label_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/label_left"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textColor="#80000000"
+                    android:textSize="16sp"
+                    tools:text="2,135.11万\n累计操盘金额" />
+
+                <TextView
+                    android:id="@+id/label_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/label_left"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textColor="#80000000"
+                    android:textSize="16sp"
+                    tools:text="45.7%\n平均收益率" />
+
+                <View
+                    android:id="@+id/line1"
+                    style="@style/SepLineHorizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="68dp"/>
+
+                <TextView
+                    android:id="@+id/label_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line1"
+                    android:padding="16dp"
+                    android:text="操盘手介绍"
+                    android:textColor="@color/gmf_text_blue"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/label_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_title"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="14sp"
+                    tools:text="自由操盘人。曾任福布斯中国十佳资产管理公司研究总监；大型保险公司首席投资经理。\n近三年收益率：2013年约72%，2014年约60%，2015年至今约130%\n投资理念：价值投资，结合中国资本市场特点，创建了自有的价值投资体系。 投资策略：自下而上，在权威第三方研究机构研究成果的基础上，通过调研及与不同渠道的沟通对投资标的进行深度研究。强调估值安全边际，对严重低估标的进行集中的长期投资。"/>
+
+                <View
+                    style="@style/SepLineHorizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/card_history_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/sel_fund_card_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/label_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line1"
+                    android:padding="16dp"
+                    android:text="近年历史收益率"
+                    android:textColor="@color/gmf_text_blue"
+                    android:textSize="12sp"/>
+
+                <com.yale.ui.mkchart.charts.BarChart
+                    android:id="@+id/chart_history_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="*数据来自于操盘手提供的历史交割单"
+                    android:textColor="#D0D0D0"
+                    android:textSize="10sp" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/layer_empty_nested"/>
+
+    <include layout="@layout/layer_loading_nested"/>
+
+    <include layout="@layout/layer_reload_nested"/>
+</FrameLayout>

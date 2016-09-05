@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="注册操盘侠"/>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_award"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                app:placeholderImage="@mipmap/ic_award_placeholder"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="恭喜您注册成功！"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/label_award_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="您已获得 2.5元 佣金！实名认证绑卡后即可投资"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/btn_edit"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="完善账户资料"
+                android:textSize="@dimen/gmf_button_text_size_large"/>
+        </LinearLayout>
+
+        <include layout="@layout/layer_loading"/>
+    </FrameLayout>
+</LinearLayout>

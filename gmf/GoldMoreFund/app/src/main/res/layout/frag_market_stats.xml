@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="行情中心"/>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.goldmf.GMFund.widget.StaticTableView
+                        android:id="@+id/table_stock_index"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gmf_white"
+                        android:orientation="vertical"/>
+
+                    <RelativeLayout
+                        android:id="@+id/header_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/gmf_white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="行业涨幅榜"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/ic_arrow_right_dark"/>
+
+                        <View style="@style/SepLineHorizontal"/>
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+
+                    <com.goldmf.GMFund.widget.StaticTableView
+                        android:id="@+id/table_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gmf_white"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/gmf_white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="个股涨幅榜"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/ic_arrow_right_dark"/>
+
+                        <View style="@style/SepLineHorizontal"/>
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+
+                    <com.goldmf.GMFund.widget.StaticTableView
+                        android:id="@+id/table_rise_stock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gmf_white"
+                        android:orientation="vertical"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/gmf_white">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="个股跌幅榜"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/ic_arrow_right_dark"/>
+
+                        <View style="@style/SepLineHorizontal"/>
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true"/>
+                    </RelativeLayout>
+
+                    <com.goldmf.GMFund.widget.StaticTableView
+                        android:id="@+id/table_fall_stock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gmf_white"
+                        android:orientation="vertical"/>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/layer_loading"/>
+
+        <include layout="@layout/layer_reload"/>
+    </FrameLayout>
+
+</LinearLayout>

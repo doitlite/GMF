@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/gmf_white"
+    android:orientation="vertical"
+    tools:layout_marginTop="25dp">
+
+    <com.goldmf.GMFund.widget.UserAvatarView
+        android:id="@+id/img_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="42dp" />
+
+    <ImageView
+        android:id="@+id/img_rank"
+        android:layout_width="28dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp" />
+
+    <TextView
+        android:id="@+id/label_rank"
+        android:layout_width="28dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="20"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/label_match_income_ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:text="111.23%"
+        android:textColor="@color/gmf_text_red"
+        android:textSize="20sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/section_name_and_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/label_match_income_ratio"
+        android:layout_toRightOf="@id/img_avatar">
+
+        <TextView
+            android:id="@+id/label_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="股神在世"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label_match_brief"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/section_name_and_sign"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/section_name_and_sign"
+        android:layout_marginBottom="10dp"
+        android:text="股神在世"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="10sp" />
+
+</RelativeLayout>

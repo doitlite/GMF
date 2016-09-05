@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@drawable/sel_cell_bg_default"
+    android:clickable="true"
+    tools:layout_marginTop="25dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        app:placeholderImage="@mipmap/ic_avatar_placeholder" />
+
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:text="下午 2:53"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/label_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_icon"
+        android:layout_alignRight="@id/label_date"
+        android:background="@color/gmf_red"
+        android:gravity="center"
+        android:minHeight="18dp"
+        android:minWidth="18dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:singleLine="true"
+        android:text="6999"
+        android:textColor="@color/gmf_text_white"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/label_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_icon"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/label_date"
+        android:layout_toRightOf="@id/img_icon"
+        android:singleLine="true"
+        android:text="小超人逆袭一号"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/label_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/label_count"
+        android:layout_alignLeft="@id/label_title"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@id/label_count"
+        android:singleLine="true"
+        android:text="今日仓位调整62.32%->72.18%"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="14sp" />
+
+</RelativeLayout>

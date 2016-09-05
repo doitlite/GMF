@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo $0
+script_dir_path=`dirname $0`
+cd $script_dir_path
+cd ./GoldMoreFund
+./gradlew :app:installDebug
+cd -

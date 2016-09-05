@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D73415">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="#0D000000">
+
+        <Button
+            android:id="@+id/btn_left"
+            style="@style/GMFPlainButton.Black_Dark"
+            android:layout_centerVertical="true"
+            android:text="跳过"/>
+
+        <Button
+            android:id="@+id/btn_right"
+            style="@style/GMFPlainButton.Black_Dark"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="下一步"/>
+
+        <LinearLayout
+            android:id="@+id/section_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"/>
+
+    </RelativeLayout>
+</FrameLayout>

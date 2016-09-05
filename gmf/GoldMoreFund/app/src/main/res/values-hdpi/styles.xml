@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gmf_dialog_width">260dp</dimen>
+    <dimen name="gmf_sliding_menu_width">240dp</dimen>
+</resources>

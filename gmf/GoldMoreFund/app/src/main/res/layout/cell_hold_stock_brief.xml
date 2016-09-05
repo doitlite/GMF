@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="40dp"
+              android:background="@color/gmf_act_bg"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="97"
+        android:clickable="true"
+        android:paddingLeft="10dp"
+        android:text="股票行情"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+    <View
+        style="@style/SepLineVertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="89"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="买入"
+        android:textColor="@color/gmf_text_blue"
+        android:textSize="14sp"/>
+
+    <View
+        style="@style/SepLineVertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="89"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="卖出"
+        android:textColor="@color/gmf_orange"
+        android:textSize="14sp"/>
+
+    <View
+        style="@style/SepLineVertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="97"
+        android:clickable="true"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:text="盈亏分析"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+</LinearLayout>

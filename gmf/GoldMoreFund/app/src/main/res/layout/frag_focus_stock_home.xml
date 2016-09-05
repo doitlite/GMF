@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.yale.ui.support.AdvanceSwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/section_add_stock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:layout_behavior="@string/gmf_dynamic_height_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_warning"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="您还没有添加自选股"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="120dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/sel_add_stock_btn_normal"
+                        android:text="去添加"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0px"
+                app:layout_behavior="@string/gmf_app_bar_layout_behavior">
+
+                <RelativeLayout
+                    android:id="@+id/header_capital"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/gmf_white"
+                    android:orientation="vertical"
+                    app:layout_scrollFlags="scroll">
+
+                    <TextView
+                        android:id="@+id/label_total_capital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:lineSpacingExtra="3dp"
+                        android:text="尚未开通模拟账户"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:id="@+id/img_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/ic_arrow_right_dark"/>
+
+                    <TextView
+                        android:id="@+id/label_income_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="6dp"
+                        android:layout_toLeftOf="@id/img_arrow"
+                        android:gravity="right"
+                        android:lineSpacingExtra="3dp"
+                        android:text="去开通"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/header_focus_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"/>
+
+                <View style="@style/SepLineHorizontal"/>
+
+            </android.support.design.widget.AppBarLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+    <include layout="@layout/layer_reload"/>
+
+    <include layout="@layout/layer_loading"/>
+
+</FrameLayout>

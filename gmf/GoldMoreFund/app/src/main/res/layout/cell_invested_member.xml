@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/gmf_white">
+
+    <TextView
+        android:id="@+id/label_index"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="8"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"
+        app:layout_widthPercent="15%"/>
+
+    <TextView
+        android:id="@+id/label_time"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/label_index"
+        android:layout_toRightOf="@id/label_index"
+        android:lineSpacingExtra="4dp"
+        android:paddingBottom="10dp"
+        android:text="06/28\n13:00"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"
+        app:layout_widthPercent="20%"/>
+
+    <TextView
+        android:id="@+id/label_name_and_phone"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/label_index"
+        android:layout_toRightOf="@id/label_time"
+        android:gravity="left"
+        android:lineSpacingExtra="4dp"
+        android:paddingBottom="10dp"
+        android:text="尚**186\n**** **67"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"
+        app:layout_widthPercent="35%"/>
+
+    <TextView
+        android:id="@+id/label_amount"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/label_index"
+        android:layout_toRightOf="@id/label_name_and_phone"
+        android:gravity="right"
+        android:text="1,000,000"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"
+        app:layout_widthPercent="30%"/>
+
+    <View
+        style="@style/BorderLineHorizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"/>
+</android.support.percent.PercentRelativeLayout>

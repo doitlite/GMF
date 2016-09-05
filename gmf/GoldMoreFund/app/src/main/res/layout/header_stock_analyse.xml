@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/section_current_stock"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/gmf_white">
+
+        <TextView
+            android:id="@+id/label_stock_name_and_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="新时达\n0021892"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@mipmap/ic_arrow_right_dark" />
+
+        <TextView
+            android:id="@+id/label_stock_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img_arrow"
+            android:text="23.84"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/SepLineHorizontal" />
+
+    <RelativeLayout
+        android:id="@+id/section_float"
+        android:layout_width="match_parent"
+        android:layout_height="224dp"
+        android:background="@color/gmf_white">
+
+        <LinearLayout
+            android:id="@+id/section_income_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_income_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总收益"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/ic_menu_drop" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/label_stock_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="37dp"
+            android:text="+2,503.00+5.73%"
+            android:textColor="@color/gmf_red"
+            android:textSize="30sp" />
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="92dp" />
+
+        <TextView
+            android:id="@+id/label_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="109dp"
+            android:lineSpacingExtra="2dp"
+            android:text="成本\n30.86"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_hold_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/label_cost"
+            android:layout_marginLeft="126dp"
+            android:lineSpacingExtra="2dp"
+            android:text="持有\n4,000"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/label_cost"
+            android:layout_marginLeft="237dp"
+            android:lineSpacingExtra="2dp"
+            android:text="市值\n30,400.23"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="163dp"
+            android:lineSpacingExtra="2dp"
+            android:text="仓位\n33.32%"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_sellable_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/label_position"
+            android:layout_marginLeft="126dp"
+            android:lineSpacingExtra="2dp"
+            android:text="可卖\n4,000"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_sellCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/label_position"
+            android:layout_marginLeft="237dp"
+            android:lineSpacingExtra="2dp"
+            android:text="累计卖出数量\n200,000"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/section_final"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:background="@color/gmf_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:text="最终盈亏"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_stock_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="37dp"
+            android:text="+1,503.00+2.14%"
+            android:textColor="@color/gmf_text_red"
+            android:textSize="30sp" />
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="92dp" />
+
+        <TextView
+            android:id="@+id/label_avg_buy_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="109dp"
+            android:lineSpacingExtra="2dp"
+            android:text="买入成本\n30.86"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_avg_sell_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/label_avg_buy_price"
+            android:layout_marginLeft="109dp"
+            android:lineSpacingExtra="2dp"
+            android:text="卖出成本\n33.32"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/label_accumulate_buy_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/label_avg_buy_price"
+            android:layout_marginLeft="205dp"
+            android:lineSpacingExtra="2dp"
+            android:text="累计买入数量\n4,000"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <View style="@style/SepLineHorizontal" />
+
+    <TextView
+        android:id="@+id/trade_time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_indicator_hold_stock"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="交易记录 (15天)"
+        android:textColor="@color/gmf_text_grey" />
+
+    <LinearLayout
+        android:id="@+id/header_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/header_history_order" />
+    </LinearLayout>
+
+</LinearLayout>

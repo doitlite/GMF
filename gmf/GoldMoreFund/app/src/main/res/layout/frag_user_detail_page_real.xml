@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gmf_act_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/card_not_invest_cn"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/sel_fund_card_bg">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_cn_fund"/>
+
+                <TextView
+                    android:id="@+id/card_not_invest_cn_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:text="尚未开始投资沪深"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/card_performance_cn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/sel_fund_card_bg"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_cn_fund"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_accumulate_income_ratio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/gmf_text_red"
+                            android:textSize="16sp"
+                            tools:text="63.34%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:text="累计收益率"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_accumulate_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/gmf_text_red"
+                            android:textSize="16sp"
+                            tools:text="-36.57%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:text="累计收益"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_invested_fund_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/gmf_text_red"
+                            android:textSize="16sp"
+                            tools:text="63.34%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:text="投资组合"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/SepLineHorizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <com.yale.ui.mkchart.charts.LineChart
+                    android:id="@+id/chart_performance"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_check"
+                    style="@style/GMFRoundButton.Yellow"
+                    android:layout_width="@dimen/gmf_button_width_large"
+                    android:layout_height="@dimen/gmf_button_height_large"
+                    android:layout_margin="16dp"
+                    android:text="查看我的沪深组合"
+                    android:textSize="@dimen/gmf_button_text_size_large"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/card_not_invest_hk"
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/sel_fund_card_bg">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_hk_fund"/>
+
+                <TextView
+                    android:id="@+id/card_not_invest_hk_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:text="尚未开始投资港股"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/card_performance_hk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/sel_fund_card_bg"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:src="@mipmap/ic_hk_fund"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_accumulate_income_ratio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/gmf_text_red"
+                            android:textSize="16sp"
+                            tools:text="63.34%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:text="累计收益率"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_accumulate_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/gmf_text_red"
+                            android:textSize="16sp"
+                            tools:text="-36.57%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:text="累计收益"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="40dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/label_invested_fund_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/gmf_text_red"
+                            android:textSize="16sp"
+                            tools:text="63.34%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="4dp"
+                            android:text="投资组合"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/SepLineHorizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <com.yale.ui.mkchart.charts.LineChart
+                    android:id="@+id/chart_performance"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_check"
+                    style="@style/GMFRoundButton.Yellow"
+                    android:layout_width="@dimen/gmf_button_width_large"
+                    android:layout_height="@dimen/gmf_button_height_large"
+                    android:layout_margin="16dp"
+                    android:text="查看我的港股组合"
+                    android:textSize="@dimen/gmf_button_text_size_large"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/layer_empty_nested"/>
+
+    <include layout="@layout/layer_loading_nested"/>
+
+    <include layout="@layout/layer_reload_nested"/>
+</FrameLayout>

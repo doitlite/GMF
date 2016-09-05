@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/header_award_or_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_red"
+                android:padding="16dp">
+
+    <TextView
+        android:id="@+id/label_left_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前可用积分"
+        android:textColor="@color/gmf_text_light_grey"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_left_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_left_text1"
+        android:layout_marginTop="10dp"
+        android:text="200"
+        android:textColor="@color/gmf_text_white"
+        android:textSize="30sp"/>
+
+    <View
+        android:id="@+id/line"
+        style="@style/SepLineVertical"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/label_left_text2"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/gmf_text_light_grey"/>
+
+    <TextView
+        android:id="@+id/label_right_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/label_left_text1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/line"
+        android:text="累计获得积分"
+        android:textColor="@color/gmf_text_light_grey"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_right_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_right_text1"
+        android:layout_below="@id/label_right_text1"
+        android:layout_marginTop="4dp"
+        android:text="200"
+        android:textColor="@color/gmf_text_white"
+        android:textSize="12sp"/>
+</RelativeLayout>

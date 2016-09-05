@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <com.goldmf.GMFund.widget.EmbedProgressView
+        android:id="@+id/section_loading"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+</merge>

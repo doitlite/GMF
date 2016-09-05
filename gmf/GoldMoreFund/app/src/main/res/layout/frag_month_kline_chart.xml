@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg">
+
+    <FrameLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_white"
+        android:paddingBottom="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="20dp">
+
+        <io.yale.infinitychartview.lib.InfinityChartView
+            android:id="@+id/chart_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/chart_left_loading_view"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="下一页"/>
+
+            <io.yale.infinitychartview.lib.ChartViewContainer
+                android:id="@+id/chart_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </io.yale.infinitychartview.lib.InfinityChartView>
+
+        <LinearLayout
+            android:id="@+id/section_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp">
+
+            <FrameLayout
+                android:id="@+id/section_left_top"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/label_max_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最高"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="8sp"/>
+
+                <TextView
+                    android:id="@+id/label_min_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="平均值"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="8sp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/section_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/label_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="298.67"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="8sp"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <include layout="@layout/layer_loading"/>
+
+    <include layout="@layout/layer_reload"/>
+
+</FrameLayout>

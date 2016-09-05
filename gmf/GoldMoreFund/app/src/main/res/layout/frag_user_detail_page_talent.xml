@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/gmf_act_bg">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/card_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/sel_fund_card_bg">
+
+                <TextView
+                    android:id="@+id/label_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:textColor="#80000000"
+                    android:textSize="16sp"
+                    tools:text="234\n累计投资人次"/>
+
+                <TextView
+                    android:id="@+id/label_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/label_left"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textColor="#80000000"
+                    android:textSize="16sp"
+                    tools:text="2,135.11万\n累计操盘金额"/>
+
+                <TextView
+                    android:id="@+id/label_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/label_left"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:textColor="#80000000"
+                    android:textSize="16sp"
+                    tools:text="45.7%\n平均收益率"/>
+
+                <View
+                    android:id="@+id/line1"
+                    style="@style/SepLineHorizontal"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="68dp"/>
+
+                <TextView
+                    android:id="@+id/label_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line1"
+                    android:padding="16dp"
+                    android:text="牛人介绍"
+                    android:textColor="@color/gmf_text_blue"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/label_brief1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_title1"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="n本人07年入市，并于该年9月辞职专职投资，期间经历了惨烈的530爆跌，以及07年10月至08年的大熊市，由于是借贷加杠杆资金入市，并在地震时全仓东方电气连吃几个一字跌…"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:id="@+id/line2"
+                    style="@style/SepLineHorizontal"
+                    android:layout_below="@id/label_brief1"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:id="@+id/label_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line2"
+                    android:padding="16dp"
+                    android:text="操盘理念"
+                    android:textColor="@color/gmf_text_blue"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/label_brief2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_title2"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="对于A股这个并不成熟的市场而言，很多成熟市场的投资理念在这里并不能得到良好体现和有所回报，做为资深股民，你必须有良好的市场风向感知能力，基于公开的经济形势先…"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/layer_empty_nested"/>
+
+    <include layout="@layout/layer_loading_nested"/>
+
+    <include layout="@layout/layer_reload_nested"/>
+</FrameLayout>

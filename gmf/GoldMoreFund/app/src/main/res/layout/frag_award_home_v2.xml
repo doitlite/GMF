@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical"
+    tools:layout_marginBottom="48dp">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_red">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="佣金" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/section_header"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include layout="@layout/header_award_or_score_page" />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/gmf_white"
+                    app:tabIndicatorColor="@color/gmf_black"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/gmf_text_black"
+                    app:tabTextColor="@color/gmf_text_grey" />
+
+                <View style="@style/SepLineHorizontal" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/section_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/gmf_white"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp">
+
+                <View style="@style/SepLineHorizontal" />
+
+                <Button
+                    android:id="@+id/btn_invite"
+                    style="@style/GMFRoundButton.Red"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="邀请好友"
+                    android:textSize="@dimen/gmf_button_text_size_medium" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <include layout="@layout/layer_reload" />
+
+        <include layout="@layout/layer_loading" />
+
+    </FrameLayout>
+
+</LinearLayout>

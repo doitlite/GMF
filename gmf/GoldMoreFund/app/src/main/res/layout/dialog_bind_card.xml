@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/transparent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/gmf_act_bg"
+        app:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ic_bind_card_mark"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/label_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="每一个注册账户，实名认证后只能绑定一张名下安全银行卡，绑定后进行的充值和提现等操作，只能通过这一张银行卡来完成。
+
+同卡进出安全策略能够在最大程度保障您的资金安全，因为您的所有资金只能提现到充值银行卡，即使发生手机丢失，或银行卡账号泄露等情况，资金也不能被提取到其他银行卡上，这样不法分子就无法盗取您的资金。因此，从安全性上，做了充分的保障，这也是操盘侠选择资金同卡进出安全策略的原因。
+
+如需更换卡片或其他相关功能帮助，请联系客服。"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <Button
+                android:id="@+id/btn_bind"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="开始绑卡"
+                android:textSize="@dimen/gmf_button_text_size_large"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>

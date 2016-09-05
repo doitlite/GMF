@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/gmf_white"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="@dimen/gmf_dialog_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            android:text="打开提醒通知"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/label_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:maxHeight="300dp"
+            android:text="打开通知，不再错过热门投资组合发布的信息提示框的内容是变化多样的但是通常情况下由文本组成的。"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/section_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_negative"
+                style="@style/GMFPlainButton.Black_Light"
+                android:layout_width="@dimen/gmf_plain_button_width_small"
+                android:layout_height="@dimen/gmf_plain_button_height_small"
+                android:text="暂不设置"
+                android:textSize="@dimen/gmf_plain_button_text_size_small" />
+
+            <Button
+                android:id="@+id/btn_positive"
+                style="@style/GMFPlainButton.Blue"
+                android:layout_width="@dimen/gmf_plain_button_width_small"
+                android:layout_height="@dimen/gmf_plain_button_height_small"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="允许通知"
+                android:textSize="@dimen/gmf_plain_button_text_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

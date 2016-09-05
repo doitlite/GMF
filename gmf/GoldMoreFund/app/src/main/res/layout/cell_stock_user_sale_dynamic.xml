@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:background="@color/gmf_white">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_avatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@mipmap/ic_avatar_placeholder"
+        app:placeholderImageScaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/label_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_avatar"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/img_avatar"
+        android:text="股神在世"
+        android:textColor="#2C3436"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_user_name"
+        android:layout_below="@id/label_user_name"
+        android:layout_marginTop="6dp"
+        android:text="总收益 64.23%"
+        android:textColor="#A7A7A7"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/img_avatar"
+        android:layout_marginRight="16dp"
+        android:text="15分钟前"/>
+
+    <TextView
+        android:id="@+id/label_stock_buy"
+        android:layout_width="16dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/img_avatar"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/ic_stock_buy_bg"
+        android:gravity="center"
+        android:text="买入"
+        android:textColor="@color/gmf_text_white"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/label_stock_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/label_stock_buy"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/label_stock_buy"
+        android:text="天康生物"
+        android:textColor="#2C3436"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/label_stock_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_stock_name"
+        android:layout_below="@id/label_stock_name"
+        android:layout_marginTop="5dp"
+        android:text="SH600059"
+        android:textColor="#A7A7A7"
+        android:textSize="10sp"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/label_stock_name"
+        android:background="#979797"/>
+
+    <TextView
+        android:id="@+id/label_income_ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/label_stock_name"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/line"
+        android:text="12.32%  >  45.67%"
+        android:textColor="#2C3436"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/label_business_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_income_ratio"
+        android:layout_below="@id/label_income_ratio"
+        android:layout_marginTop="5dp"
+        android:text="成交价 12.23"
+        android:textColor="#A7A7A7"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/btn_follow_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="-4.32%\n本次收益"
+        android:textColor="#A7A7A7"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

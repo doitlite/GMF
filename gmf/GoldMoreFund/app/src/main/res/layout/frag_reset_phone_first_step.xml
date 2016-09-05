@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_centerInParent="true"
+            android:text="修改手机号"/>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/label_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="小飞侠(18612345678)，验证身份后更换手机号"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="16sp"/>
+
+    <com.goldmf.GMFund.widget.EditTextWrapper
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gmf_list_cell_height"
+        android:layout_marginTop="20dp"
+        android:background="@color/gmf_white"
+        app:lineBottom="true"
+        app:lineTop="true">
+
+        <Button
+            android:id="@+id/btn_send_code"
+            style="@style/GMFRoundButton.Yellow"
+            android:layout_width="@dimen/gmf_button_width_small"
+            android:layout_height="@dimen/gmf_button_height_small"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:inputType="phone"
+            android:text="获取验证码"
+            android:textSize="@dimen/gmf_button_text_size_small"/>
+
+        <EditText
+            android:id="@+id/field_code"
+            style="@style/GMFEditText"
+            android:layout_width="0px"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/btn_send_code"
+            android:hint="请输入短信验证码"
+            android:imeOptions="actionDone"/>
+
+    </com.goldmf.GMFund.widget.EditTextWrapper>
+
+    <com.goldmf.GMFund.widget.ProgressButton
+        android:id="@+id/btn_next"
+        android:layout_width="@dimen/gmf_button_width_large"
+        android:layout_height="@dimen/gmf_button_height_large"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        app:buttonTheme="yellow"
+        app:textSize="@dimen/gmf_button_text_size_large"
+        app:text_for_loading="请稍等..."
+        app:text_for_normal="下一步"/>
+
+    <TextView
+        android:id="@+id/contact_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="如手机已丢失或停用，请联系客服"
+        android:textColor="@color/gmf_text_light_grey"
+        android:textSize="14sp"/>
+
+</LinearLayout>

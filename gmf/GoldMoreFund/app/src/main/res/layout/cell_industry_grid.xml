@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                tools:background="@color/gmf_white">
+
+    <TextView
+        android:id="@+id/label_industry_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="光学光电子"
+        android:textColor="#222222"
+        android:textSize="12sp"/>
+
+
+    <TextView
+        android:id="@+id/label_industry_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="+6.32%"
+        android:textColor="@color/gmf_text_red"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/label_stock_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="中海集运"
+        android:textColor="#4A4A4A"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/label_stock_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp"
+        android:text="+708.98 +6.96%"
+        android:textColor="#4A4A4A"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

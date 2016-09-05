@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:background="@color/gmf_act_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/section_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gmf_white"
+            android:orientation="vertical">
+
+            <include layout="@layout/cell_circle_list"/>
+
+            <RelativeLayout
+                android:id="@+id/section_like_user"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/label_like_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gmf_text_red"
+                    android:textSize="12sp"
+                    tools:text="6人觉得值"/>
+
+                <LinearLayout
+                    android:id="@+id/gallery_like_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/SepLineHorizontal"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/section_dislike_user"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/label_dislike_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"
+                    tools:text="2人觉得坑"/>
+
+                <LinearLayout
+                    android:id="@+id/gallery_dislike_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:background="@color/gmf_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付积分才能看到隐藏内容"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_pay"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:text="立即支付100积分"
+                android:textSize="@dimen/gmf_button_text_size_large"
+                tools:background="@drawable/sel_round_button_yellow_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="支付完成后即可对神秘情报进行评价"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:background="@color/gmf_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="觉得这个情报值么？"
+                android:textColor="@color/gmf_black"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="314">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="147"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_like"
+                        style="@style/GMFRoundButton.Red"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:text="超值"
+                        android:textSize="@dimen/gmf_button_text_size_large"
+                        tools:background="@drawable/sel_round_button_red_bg"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="积分支付给作者"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"/>
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="147"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_dislike"
+                        style="@style/GMFRoundButton.Black"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:text="坑爹"
+                        android:textSize="@dimen/gmf_button_text_size_large"
+                        tools:background="@drawable/sel_round_button_black_bg"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="积分被系统回收"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_after_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:background="@color/gmf_white">
+
+            <ImageView
+                android:id="@+id/img_after_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_like_big"/>
+
+            <TextView
+                android:id="@+id/label_after_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="超值！作者将会收到我的100积分！"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_send"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:text="我也来发一条"
+                android:textSize="@dimen/gmf_button_text_size_large"
+                tools:background="@drawable/sel_round_button_yellow_bg"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/label_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            android:paddingBottom="48dp"
+            tools:text="积分可以通过在积分商城做任务获得"/>
+
+    </LinearLayout>
+</ScrollView>

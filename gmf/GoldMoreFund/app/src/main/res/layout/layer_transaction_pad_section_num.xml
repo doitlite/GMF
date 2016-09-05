@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:layout_height="176dp">
+
+    <Button
+        android:id="@+id/btn_purchase"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_alignParentRight="true"
+        android:background="@color/gmf_blue"
+        android:text="买入"
+        android:textColor="@color/gmf_text_white" />
+
+    <Button
+        android:id="@+id/btn_sell"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/btn_purchase"
+        android:background="@color/gmf_blue"
+        android:text="卖出"
+        android:textColor="@color/gmf_text_white" />
+
+    <com.goldmf.GMFund.widget.keyboard.CustomKeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/btn_purchase"
+        android:background="#f2f2f2"
+        android:keyBackground="@drawable/sel_key_bg_default"
+        app:anotherKeyBackground="@drawable/sel_key_bg_special"
+        app:keyBackground="@drawable/sel_key_bg_default"
+        app:keyTextSize="20sp"
+        app:labelTextSize="20sp" />
+</RelativeLayout>

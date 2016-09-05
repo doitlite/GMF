@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="实名认证" />
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_success_tick_large" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="已认证，绑定名下银行卡即可开始投资"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/btn_bind"
+        style="@style/GMFRoundButton.Yellow"
+        android:layout_width="@dimen/gmf_button_width_large"
+        android:layout_height="@dimen/gmf_button_height_large"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="立即绑卡"
+        android:textSize="@dimen/gmf_button_text_size_large" />
+
+    <Button
+        android:id="@+id/btn_later"
+        style="@style/GMFRoundButton.Grey"
+        android:layout_width="@dimen/gmf_button_width_large"
+        android:layout_height="@dimen/gmf_button_height_large"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="暂不绑卡"
+        android:textSize="@dimen/gmf_button_text_size_large" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#F5F5F5">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="时间"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="110dp"
+            android:text="类型/明细"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:text="金额/状态"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+</merge>

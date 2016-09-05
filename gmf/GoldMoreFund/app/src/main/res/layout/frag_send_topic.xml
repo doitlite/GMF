@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="图文话题"/>
+
+        <FrameLayout
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/sel_plain_button_bg_light"
+            android:minHeight="@dimen/toolbarBtnSize"
+            android:minWidth="@dimen/toolbarBtnSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="发送"
+                android:textColor="@color/gmf_text_yellow"
+                android:textSize="14sp"/>
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/section_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gmf_white"
+                        app:actualImageScaleType="centerCrop"
+                        app:placeholderImage="@mipmap/ic_cover_placeholder"
+                        app:placeholderImageScaleType="center"
+                        app:viewAspectRatio="2.5"/>
+
+                    <ImageView
+                        android:id="@+id/img_delete_cover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/ic_delete_cover"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/label_title"
+                    style="@style/GMFEditText"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left|top"
+                    android:hint="请输入标题(20字以内）"
+                    android:maxLength="20"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="13dp"/>
+
+                <EditText
+                    android:id="@+id/label_content"
+                    style="@style/GMFEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left|top"
+                    android:hint="请输入内容"
+                    android:minHeight="240dp"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="13dp"
+                    android:singleLine="false"/>
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/cell_insert_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gmf_list_cell_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gmf_white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawableLeft="@mipmap/ic_intercept_photo"
+                        android:drawablePadding="8dp"
+                        android:text="插入图片"
+                        android:textColor="@color/gmf_button_white_pressed"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.goldmf.GMFund.widget.EmbedProgressView
+            android:id="@+id/section_sending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+</LinearLayout>

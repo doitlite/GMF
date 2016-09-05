@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="全部组合" />
+
+        <Button
+            android:id="@+id/btn_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            android:minWidth="?attr/actionBarSize"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="按状态"
+            android:textColor="@color/gmf_text_white"
+            android:textSize="14sp" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_white"
+                android:paddingLeft="46dp"
+                android:paddingRight="46dp">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    app:tabIndicatorColor="@color/gmf_black"
+                    app:tabSelectedTextColor="@color/gmf_black"
+                    app:tabTextColor="@color/gmf_text_grey" />
+            </FrameLayout>
+
+            <com.yale.ui.support.AdvanceSwipeRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+        </LinearLayout>
+
+        <include layout="@layout/layer_reload" />
+
+        <include layout="@layout/layer_loading" />
+    </FrameLayout>
+
+</LinearLayout>

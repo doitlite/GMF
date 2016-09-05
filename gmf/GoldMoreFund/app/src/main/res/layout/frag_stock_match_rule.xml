@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/gmf_act_bg">
+
+    <LinearLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/section_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:placeholderImage="@mipmap/ic_fund_cover_placeholder"
+                        app:placeholderImageScaleType="centerCrop"
+                        app:viewAspectRatio="2.5"/>
+
+                    <RelativeLayout
+                        android:id="@+id/header_match_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/gmf_white"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/label_match_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="比赛时间：5月9日~5月13日"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/label_signUp_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:text="3456人已报名"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="14sp"/>
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true"/>
+
+                    </RelativeLayout>
+
+                    <com.goldmf.GMFund.widget.GMFWebview
+                        android:id="@+id/webView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/section_left_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/gmf_white"
+            android:orientation="vertical">
+
+            <View style="@style/BorderLineHorizontal"/>
+
+            <TextView
+                android:id="@+id/label_bottom_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="我已报名 · 3天后开赛"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:id="@+id/section_bottom_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_bottom_brief"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layer_loading"/>
+
+    <include layout="@layout/layer_reload"/>
+
+</FrameLayout>

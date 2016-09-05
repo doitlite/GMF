@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_red"
+        app:layout_scrollFlags="scroll">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/CustomizeToolbarTitle"
+                android:layout_width="0px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                tools:text="无限滚雪球A股精选组合" />
+
+            <TextView
+                android:id="@+id/label_fund_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_money_type_text_bg"
+                android:paddingBottom="1dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="1dp"
+                android:textColor="@color/gmf_white"
+                android:textSize="10sp"
+                android:visibility="invisible"
+                tools:text="沪深" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yale.ui.support.AdvanceSwipeRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <android.support.design.widget.AppBarLayout
+                        android:id="@id/appBarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:elevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/section_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/gmf_red"
+                            android:orientation="vertical"
+                            app:layout_scrollFlags="scroll">
+
+                            <FrameLayout
+                                android:id="@+id/header_review"
+                                android:layout_width="match_parent"
+                                android:layout_height="104dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/label_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="24dp"
+                                    android:text="组合审核中"
+                                    android:textColor="@color/gmf_text_white"
+                                    android:textSize="28sp" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/header_order"
+                                android:layout_width="match_parent"
+                                android:layout_height="104dp"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/label_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="开放投资倒计时"
+                                    android:textColor="#80ffffff"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/label_remaining_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="36dp"
+                                    android:text="5天"
+                                    android:textColor="@color/gmf_text_white"
+                                    android:textSize="28sp" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/header_capital"
+                                android:layout_width="match_parent"
+                                android:layout_height="104dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/label_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="组合金额已达"
+                                    android:textColor="#80ffffff"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/label_raised_money"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="36dp"
+                                    android:text="4,675,100元"
+                                    android:textColor="@color/gmf_text_white"
+                                    android:textSize="36sp" />
+
+                                <FrameLayout
+                                    android:layout_width="44dp"
+                                    android:layout_height="44dp"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_marginRight="16dp">
+
+                                    <com.goldmf.GMFund.widget.GMFCircleProgressBar
+                                        android:id="@+id/progress_raised"
+                                        android:layout_width="42dp"
+                                        android:layout_height="42dp"
+                                        android:layout_gravity="center" />
+
+                                    <TextView
+                                        android:id="@+id/label_raised_money_progress"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="96%"
+                                        android:textColor="@color/gmf_text_white"
+                                        android:textSize="11sp"
+                                        android:textStyle="bold" />
+                                </FrameLayout>
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/header_locked_or_stop"
+                                android:layout_width="match_parent"
+                                android:layout_height="104dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/label_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="当前收益率"
+                                    android:textColor="#80ffffff"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/label_income_ratio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="32dp"
+                                    android:text="-5.43%"
+                                    android:textColor="@color/gmf_text_white"
+                                    android:textSize="36sp" />
+
+                                <View
+                                    android:id="@+id/line_sep"
+                                    style="@style/SepLineVertical"
+                                    android:layout_height="28dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="172dp"
+                                    android:background="#4dffffff" />
+
+                                <TextView
+                                    android:id="@+id/label_income"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="189dp"
+                                    android:lineSpacingExtra="4dp"
+                                    android:text="我的预期盈亏\n-562.12元"
+                                    android:textColor="#80ffffff"
+                                    android:textSize="12sp" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/header_not_invest"
+                                android:layout_width="match_parent"
+                                android:layout_height="104dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/label_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="当前收益率"
+                                    android:textColor="#80ffffff"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginTop="36dp"
+                                    android:text="收益信息仅投资人可见"
+                                    android:textColor="@color/gmf_text_white"
+                                    android:textSize="28sp" />
+
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/label_fund_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:background="#1a000000"
+                                android:drawableLeft="@mipmap/ic_fund_state"
+                                android:drawablePadding="6dp"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:singleLine="true"
+                                android:text="我投资了 10,000 元, 盈亏 +15.12元"
+                                android:textColor="#80ffffff"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@color/gmf_white"
+                            app:tabIndicatorColor="@color/gmf_black"
+                            app:tabMode="scrollable"
+                            app:tabPaddingEnd="12dp"
+                            app:tabPaddingStart="12dp"
+                            app:tabSelectedTextColor="@color/gmf_black" />
+
+                    </android.support.design.widget.AppBarLayout>
+
+
+                </android.support.design.widget.CoordinatorLayout>
+            </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/section_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/gmf_white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:paddingBottom="12dp">
+
+                <View
+                    style="@style/BorderLineHorizontal"
+                    android:layout_height="1dp" />
+
+                <TextView
+                    android:id="@+id/label_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="审核中 | 将会在两个工作日内完成审核"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/section_bottom_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="12dp"></LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+
+        <include layout="@layout/layer_empty" />
+
+    </FrameLayout>
+</LinearLayout>

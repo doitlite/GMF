@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/contentView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_white"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/gmf_list_cell_height"
+        android:layout_height="@dimen/gmf_list_cell_height"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_close_dialog"/>
+
+    <ImageView
+        android:id="@+id/section_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_fund_date"/>
+
+    <TextView
+        android:id="@+id/section_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:text="运行期\n90天"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/section_title">
+
+        <TextView
+            android:id="@+id/section_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:text="操盘侠通过采取预警线、止损线等风控措施尽力保证投资人保本比例达到XXX%。但因极端行情或不可抗力导致损失超过止损比例的，操盘侠不承担责任。操盘乐到期清算后，在扣除操盘手收益分成后，组合其余YYYY%为投资人的收益分成。"
+            android:textColor="@color/gmf_black"
+            android:textSize="14dp"/>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="关于" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/ic_logo_landscape" />
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:lineBottomHasMarginRight="true"
+                app:title="帮助中心" />
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:lineBottomHasMarginRight="true"
+                app:title="反馈建议" />
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_check_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:lineBottomHasMarginRight="true"
+                app:title="检查版本更新" />
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:lineBottomHasMarginRight="true"
+                app:title="为什么选择操盘侠" />
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_user_protocol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:lineBottomHasMarginRight="true"
+                app:title="用户协议" />
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_public_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:extraTitle="微信搜索 caopanman"
+                app:lineBottom="true"
+                app:lineBottomHasMarginLeft="true"
+                app:lineBottomHasMarginRight="true"
+                app:title="公众号" />
+
+            <com.goldmf.GMFund.widget.ProgressButton
+                android:id="@+id/btn_logout"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                app:buttonTheme="red"
+                app:text_for_loading="操作中..."
+                app:text_for_normal="退出登录" />
+
+            <TextView
+                android:id="@+id/label_versionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="v1.0.0"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:text="© 2016 caopanman.com"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

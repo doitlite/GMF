@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/gmf_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gmf_list_cell_height">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/gmf_list_cell_height"
+            android:layout_height="@dimen/gmf_list_cell_height"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/ic_close_dialog"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/calendar_pad_title"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_month"
+            style="@style/GMFPlainButton.Blue"
+            android:layout_width="@dimen/gmf_plain_button_width_small"
+            android:layout_height="@dimen/gmf_plain_button_height_small"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="整月"
+            android:textSize="@dimen/gmf_plain_button_text_size_small"/>
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.goldmf.GMFund.widget.StringFlow
+                android:id="@+id/flow_date"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:layout_widthPercent="30%"
+                app:visibleElementCount="5"/>
+
+            <com.goldmf.GMFund.widget.CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/flow_date"
+                android:padding="16dp"/>
+
+        </android.support.percent.PercentRelativeLayout>
+
+        <com.goldmf.GMFund.widget.EmbedProgressView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</LinearLayout>

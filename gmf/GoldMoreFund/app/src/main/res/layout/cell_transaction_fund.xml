@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.goldmf.GMFund.widget.InputCell
+        android:id="@+id/cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:extraHintText="买入"
+        app:hintText="请输入数量"
+        app:lineBottom="true"
+        app:lineTop="true"
+        app:title="阿里花花幼稚园" />
+
+    <TextView
+        android:id="@+id/label_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cell"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="最大可买1,000,000  最大可卖192,720"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/label_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/label_hint"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:text="+5.73% 调整至25%"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

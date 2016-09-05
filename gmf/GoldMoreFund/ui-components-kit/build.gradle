@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion "$BUILD_COMPILE_SDK_VERSION".toInteger()
+    buildToolsVersion "$BUILD_TOOLS_VERSION"
+
+    defaultConfig {
+        minSdkVersion "$BUILD_MIN_SDK_VERION".toInteger()
+        targetSdkVersion "$BUILD_TARGET_SDK_VERSION".toInteger()
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:cardview-v7:$ANDROID_SUPPORT_VERSION"
+    compile "io.reactivex:rxandroid:$RXANDROID_VERSION"
+    compile "com.facebook.fresco:fresco:$FRESCO_VERSION"
+}

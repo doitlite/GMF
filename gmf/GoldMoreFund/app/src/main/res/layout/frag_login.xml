@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="操盘侠账号" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/label_hi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="夏非夏，欢迎您回来"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="16sp" />
+
+    <com.goldmf.GMFund.widget.EditTextWrapper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:lineBottom="true"
+        app:lineTop="true">
+
+        <EditText
+            android:id="@+id/field_pwd"
+            style="@style/GMFEditText"
+            android:layout_centerVertical="true"
+            android:hint="@string/act_login_hint_input_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword" />
+
+    </com.goldmf.GMFund.widget.EditTextWrapper>
+
+    <com.goldmf.GMFund.widget.ProgressButton
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/gmf_button_width_large"
+        android:layout_height="@dimen/gmf_button_height_large"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:buttonTheme="yellow"
+        app:textSize="@dimen/gmf_button_text_size_large"
+        app:text_for_loading="正在登录..."
+        app:text_for_normal="@string/act_login_btn_login" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        style="@style/GMFPlainButton.Blue"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="忘记密码" />
+
+</LinearLayout>

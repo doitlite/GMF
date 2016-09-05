@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_marginBottom="48dp"
+    tools:layout_marginTop="25dp">
+
+    <FrameLayout
+        android:id="@+id/section_normal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_splash_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_splash_fg" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/text_copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v-version- copyright © caopanman.com"
+                android:textColor="#66000000"
+                android:textSize="10sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="8dp" />
+        </LinearLayout>
+
+        <com.goldmf.GMFund.widget.SplashCalendarView
+            android:id="@+id/splash_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </FrameLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/section_promotion"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/section_brand"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gmf_white"
+            app:layout_heightPercent="18%">
+
+            <TextView
+                android:id="@+id/text_copyright2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:text="v-version- copyright © caopanman.com"
+                android:textColor="#66000000"
+                android:textSize="10sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_above="@id/text_copyright2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/icon1"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/icon1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/icon1"
+                        android:text="汇聚操盘牛人"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/icon1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/icon1"
+                        android:text="操盘侠 · 带你股市翻红"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_promotion"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_above="@id/section_brand"
+            app:actualImageScaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:layout_alignWithParentIfMissing="true" />
+
+        <TextView
+            android:id="@+id/label_timer"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:textColor="@color/gmf_text_white"
+            android:textSize="10sp"
+            tools:background="@color/gmf_grey"
+            tools:text="跳过\n3s" />
+
+    </android.support.percent.PercentRelativeLayout>
+</FrameLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/contentView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="#E6FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="92dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_share"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:actualImageScaleType="fitCenter"
+            app:placeholderImage="@mipmap/ic_launcher"
+            app:placeholderImageScaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/label_title_and_content"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/img_share"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:text="分享我的红包券\n使用我的邀请码100038注册操盘侠，奖10元现金！投资还送千元大礼包!"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/BorderLineHorizontal"/>
+
+    <LinearLayout
+        android:id="@+id/section_platform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="20dp">
+    </LinearLayout>
+
+</LinearLayout>

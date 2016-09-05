@@ -1,0 +1,480 @@
+<resources>
+
+    <!-- common id -->
+    <item name="section_content" type="id" />
+    <item name="section_loading" type="id" />
+    <item name="section_reload" type="id" />
+    <item name="section_empty" type="id" />
+    <item name="refreshLayout" type="id" />
+    <item name="label_title" type="id" />
+    <item name="label_subtitle" type="id" />
+
+    <!-- special value -->
+    <dimen name="right_margin_of_fund_card_cell">8dp</dimen>
+    <dimen name="right_margin_of_trader_card_cell_crossing">8dp</dimen>
+    <dimen name="right_margin_of_trader_card_cell_grid">3dp</dimen>
+    <dimen name="top_margin_of_fund_card_cell">24dp</dimen>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/defaultAnimation</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="defaultAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+    </style>
+
+    <style name="TransparentActivity" parent="AppTheme">
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <color name="dialog_window_background">#7f525252</color>
+
+    <style name="GMFDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="GMFDialog_FullScreen" parent="Theme.AppCompat.Light">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- start of common -->
+    <item name="gmf_status_bar_layer" type="id" />
+
+    <color name="gmf_blue">#3498db</color>
+    <color name="gmf_red">#E74C3C</color>
+    <color name="gmf_yellow">#FFDE00</color>
+    <color name="gmf_white">#ffffff</color>
+    <color name="gmf_grey">#686868</color>
+    <color name="gmf_light_grey">#bebebe</color>
+    <color name="gmf_black">#222222</color>
+    <color name="gmf_green">#27AE60</color>
+    <color name="gmf_dark_layer">#19000000</color>›
+    <color name="gmf_purple">#9B59B6</color>
+    <color name="gmf_orange">#FFF5A623</color>
+    <color name="gmf_status_bar_black">#FF4A4A4A</color>
+
+    <color name="gmf_text_black">#333333</color>
+    <color name="gmf_text_grey">#66000000</color>
+    <color name="gmf_text_light_grey">#bebebe</color>
+    <color name="gmf_text_red">#E74C3C</color>
+    <color name="gmf_text_green">#27AE60</color>
+    <color name="gmf_text_white">#ffffff</color>
+    <color name="gmf_text_yellow">#FFDE00</color>
+    <color name="gmf_text_blue">#3498db</color>
+    <color name="gmf_text_hint">#BEBEBE</color>
+    <color name="gmf_text_purple">#9B59B6</color>
+    <color name="gmf_text_gold">#FFDE00</color>
+    <color name="gmf_text_silver">#95A5A6</color>
+    <color name="gmf_text_copper">#C7A165</color>
+    <color name="gmf_text_iron">#999999</color>
+
+    <color name="gmf_line_yellow">#FFDE00</color>
+    <color name="gmf_line_blue">#3498DB</color>
+    <color name="gmf_line_purple">#9B59B6</color>
+    <color name="gmf_line_grey">#33000000</color>
+
+    <color name="gmf_button_white_normal">#ffffff</color>
+    <color name="gmf_button_white_pressed">#cccccc</color>
+    <color name="gmf_button_blue_normal">#4A90E2</color>
+    <color name="gmf_button_blue_pressed">#4281C9</color>
+    <color name="gmf_button_yellow_normal">#FFDE00</color>
+    <color name="gmf_button_yellow_pressed">#E6C700</color>
+    <color name="gmf_button_orange_normal">#F5A623</color>
+    <color name="gmf_button_orange_pressed">#DB931F</color>
+    <color name="gmf_button_grey_normal">#E2E2E2</color>
+    <color name="gmf_button_grey_pressed">#C0C0C0</color>
+    <color name="gmf_button_black_normal">#222222</color>
+    <color name="gmf_button_black_pressed">#000000</color>
+    <color name="gmf_button_red_normal">#DC4E3B</color>
+    <color name="gmf_button_red_pressed">#CF4536</color>
+    <color name="gmf_button_disable">#E5E5E5</color>
+
+    <color name="gmf_ripple_color_dark">#cccccc</color>
+
+    <color name="gmf_act_bg">#F2F2F2</color>
+    <color name="gmf_act_bg_dim">#88333333</color>
+    <color name="gmf_sep_Line">#0D000000</color>
+    <color name="gmf_border_line">#1A222222</color>
+    <color name="gmf_progress_bg">#F5F5F5</color>
+    <color name="gmf_keyboard_header_bg">#f2f2f2</color>
+
+    <dimen name="gmf_list_cell_height">48dp</dimen>
+    <dimen name="gmf_list_cell_height_big">64dp</dimen>
+    <dimen name="gmf_bottom_bar_height">48dp</dimen>
+
+    <color name="cell_bg_default_normal">#ffffff</color>
+    <color name="cell_bg_default_pressed">#e8e8e8</color>
+
+    <color name="keyboard_key_bg_normal">#ffffff</color>
+    <color name="keyboard_key_bg_pressed">#cccccc</color>
+    <color name="keyboard_key_bg_selected">#cccccc</color>
+    <color name="keyboard_key_bg_normal_special">#00000000</color>
+    <color name="keyboard_key_bg_pressed_special">#cccccc</color>
+    <color name="keyboard_key_bg_selected_special">#cccccc</color>
+
+    <style name="SepLineHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/gmf_sep_Line</item>
+    </style>
+
+    <style name="SepLineVertical">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gmf_sep_Line</item>
+    </style>
+
+    <style name="BorderLineHorizontal" parent="SepLineHorizontal">
+        <item name="android:background">@color/gmf_border_line</item>
+    </style>
+
+    <style name="BorderLineVertical" parent="SepLineVertical">
+        <item name="android:background">@color/gmf_border_line</item>
+    </style>
+
+    <style name="HorizontalProgressBar" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:maxHeight">4dp</item>
+        <item name="android:minHeight">4dp</item>
+    </style>
+
+    <style name="HorizontalProgressBar.Yellow.Round">
+        <item name="android:progressDrawable">@drawable/progressbar_bg_yellow_round</item>
+    </style>
+
+    <style name="HorizontalProgressBar.Yellow">
+        <item name="android:progressDrawable">@drawable/progressbar_bg_yellow</item>
+    </style>
+
+    <style name="HorizontalProgressBar.Grey_Dark">
+        <item name="android:progressDrawable">@drawable/progressbar_bg_grey_dark</item>
+    </style>
+
+    <style name="HorizontalProgressBar.White">
+        <item name="android:progressDrawable">@drawable/progressbar_bg_white</item>
+    </style>
+
+    <!-- end of common -->
+
+    <style name="SinaGuaranteeLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">资金安全由新浪支付提供第三方托管</item>
+        <item name="android:textColor">@color/gmf_text_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableLeft">@mipmap/ic_account_security_black</item>
+        <item name="android:drawablePadding">8dp</item>
+    </style>
+
+    <style name="InsuranceGuaranteeLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">帐户资金安全由中国人民保险承保</item>
+        <item name="android:textColor">@color/gmf_text_black</item>
+        <item name="android:drawableLeft">@mipmap/ic_account_security_black</item>
+        <item name="android:drawablePadding">8dp</item>
+    </style>
+
+    <style name="GMFEditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gmf_text_black</item>
+        <item name="android:textColorHint">@color/gmf_text_hint</item>
+        <item name="android:background">@color/gmf_white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/gmf_list_cell_height</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="GMFEditText.Round">
+        <item name="android:background">@drawable/shape_edit_text_round</item>
+    </style>
+
+    <!-- start of button -->
+
+    <style name="GMFButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="GMFButton.Grey">
+        <item name="android:background">@drawable/sel_button_grey_bg</item>
+        <item name="android:textColor">@color/sel_button_text_dark</item>
+    </style>
+
+    <style name="GMFButton.Yellow">
+        <item name="android:background">@drawable/sel_button_yellow_bg</item>
+        <item name="android:textColor">@color/sel_button_text_dark</item>
+    </style>
+
+    <style name="GMFButton.Orange">
+        <item name="android:background">@drawable/sel_button_orange_bg</item>
+        <item name="android:textColor">@color/gmf_text_white</item>
+    </style>
+
+    <style name="GMFButton.Red">
+        <item name="android:background">@drawable/sel_button_red_bg</item>
+        <item name="android:textColor">@color/sel_button_text_light</item>
+    </style>
+
+    <style name="GMFButton.White">
+        <item name="android:background">@color/gmf_white</item>
+        <item name="android:textColor">#999999</item>
+    </style>
+
+    <style name="GMFButton.Blue">
+        <item name="android:textColor">@color/sel_button_text_light</item>
+        <item name="android:background">@drawable/sel_button_blue_bg</item>
+    </style>
+
+    <style name="GMFButton.Blue.Left">
+        <item name="android:background">@drawable/shape_btn_bg_blue_left</item>
+    </style>
+
+
+    <style name="GMFButton.Blue.Right">
+        <item name="android:background">@drawable/shape_btn_bg_blue_right</item>
+    </style>
+
+    <style name="GMFButton.BuyTag">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gmf_blue</item>
+        <item name="android:background">@drawable/shape_buy_text_bg</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="GMFButton.SellTag">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gmf_text_yellow</item>
+        <item name="android:background">@drawable/shape_sell_text_bg</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <dimen name="gmf_button_width_small">80dp</dimen>
+    <dimen name="gmf_button_height_small">32dp</dimen>
+    <dimen name="gmf_button_text_size_small">12sp</dimen>
+
+    <dimen name="gmf_button_width_medium">120dp</dimen>
+    <dimen name="gmf_button_height_medium">40dp</dimen>
+    <dimen name="gmf_button_text_size_medium">14sp</dimen>
+
+    <integer name="match_parent">-1</integer>
+    <integer name="wrap_content">-2</integer>
+    <dimen name="gmf_button_width_large">@integer/match_parent</dimen>
+    <dimen name="gmf_button_height_large">44dp</dimen>
+    <dimen name="gmf_button_text_size_large">16sp</dimen>
+
+    <!-- end of button -->
+
+    <!-- start of round button -->
+
+    <style name="GMFRoundButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="GMFRoundButton.Blue">
+        <item name="android:background">@drawable/sel_round_button_blue_bg</item>
+        <item name="android:textColor">@color/sel_button_text_light</item>
+    </style>
+
+    <style name="GMFRoundButton.Black">
+        <item name="android:background">@drawable/sel_round_button_black_bg</item>
+        <item name="android:textColor">@color/sel_button_text_light</item>
+    </style>
+
+    <style name="GMFRoundButton.Grey">
+        <item name="android:background">@drawable/sel_round_button_grey_bg</item>
+        <item name="android:textColor">@color/sel_button_text_dark</item>
+    </style>
+
+    <style name="GMFRoundButton.Yellow">
+        <item name="android:background">@drawable/sel_round_button_yellow_bg</item>
+        <item name="android:textColor">@color/sel_button_text_dark</item>
+    </style>
+
+    <style name="GMFRoundButton.Orange">
+        <item name="android:background">@drawable/sel_round_button_orange_bg</item>
+        <item name="android:textColor">@color/sel_button_text_light</item>
+    </style>
+
+    <style name="GMFRoundButton.Red">
+        <item name="android:background">@drawable/sel_round_button_red_bg</item>
+        <item name="android:textColor">@color/sel_button_text_light</item>
+    </style>
+
+    <!-- end of round button -->
+
+    <style name="GMFBackButton_Light" parent="GMFPlainButton.White">
+        <item name="android:textSize">@dimen/gmf_button_text_size_medium</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">@dimen/gmf_button_height_medium</item>
+    </style>
+
+    <style name="GMFBackButton_Dark" parent="GMFPlainButton.Black_Dark">
+        <item name="android:textSize">@dimen/gmf_button_text_size_medium</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">@dimen/gmf_button_height_medium</item>
+    </style>
+
+    <!-- start of image button -->
+    <color name="gmf_image_button_bg_normal_light">@android:color/transparent</color>
+    <color name="gmf_image_button_bg_pressed_light">#66FFFFFF</color>
+    <color name="gmf_image_button_bg_disable_light">#1AFFFFFF</color>
+    <!-- end of image button -->
+
+    <!-- start of plain button -->
+    <dimen name="gmf_plain_button_width_small">88dp</dimen>
+    <dimen name="gmf_plain_button_height_small">36dp</dimen>
+    <dimen name="gmf_plain_button_text_size_small">16sp</dimen>
+
+    <color name="gmf_plain_button_bg_normal_light">@android:color/transparent</color>
+    <color name="gmf_plain_button_bg_pressed_light">#66999999</color>
+    <color name="gmf_plain_button_bg_disable_light">#1A999999</color>
+    <color name="gmf_plain_button_bg_normal_dark">@android:color/transparent</color>
+    <color name="gmf_plain_button_bg_pressed_dark">#66CCCCCC</color>
+    <color name="gmf_plain_button_bg_disable_dark">#1ACCCCCC</color>
+
+    <style name="GMFPlainButton" parent="GMFButton">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="GMFPlainButton.White">
+        <item name="android:textColor">@color/sel_plain_button_white_text</item>
+        <item name="android:background">@drawable/sel_plain_button_bg_light</item>
+    </style>
+
+    <style name="GMFPlainButton.Black_Light">
+        <item name="android:textColor">@color/sel_plain_button_black_text</item>
+        <item name="android:background">@drawable/sel_plain_button_bg_light</item>
+    </style>
+
+    <style name="GMFPlainButton.Black_Dark">
+        <item name="android:textColor">@color/sel_plain_button_black_text</item>
+        <item name="android:background">@drawable/sel_plain_button_bg_dark</item>
+    </style>
+
+    <style name="GMFPlainButton.Blue">
+        <item name="android:textColor">@color/sel_plain_button_blue_text</item>
+        <item name="android:background">@drawable/sel_plain_button_bg_light</item>
+    </style>
+
+    <style name="GMFPlainButton.Yellow">
+        <item name="android:textColor">@color/sel_plain_button_yellow_text</item>
+        <item name="android:background">@color/sel_button_text_dark</item>
+    </style>
+
+
+    <!-- end of plain button -->
+
+    <!-- start of text_view -->
+    <style name="GMFTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="GMFTextView.BuyPrice">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#2ECC71</item>
+    </style>
+
+    <style name="GMFTextView.BuyCount">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gmf_text_grey</item>
+    </style>
+
+    <style name="GMFTextView.SellPrice">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#2ECC71</item>
+    </style>
+
+    <style name="GMFTextView.SellCount">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gmf_text_grey</item>
+    </style>
+    <!-- end of text_view -->
+
+    <!-- start of checkbox -->
+    <style name="GMFCheckbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="GMFCheckbox.Blue">
+        <item name="android:button">@drawable/sel_checkbox_blue</item>
+    </style>
+
+    <!-- start of toolbar -->
+    <item name="toolbar" type="id" />
+    <item name="toolbarTitle" type="id" />
+    <dimen name="toolbarBtnSize">@dimen/abc_action_bar_default_height_material</dimen>
+
+    <color name="toolbar_btn_bg_pressed">#11ffffff</color>
+
+    <style name="CustomizeToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:id">@id/toolbar</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/abc_action_bar_default_height_material</item>
+        <item name="android:background">@color/gmf_status_bar_black</item>
+    </style>
+
+    <style name="CustomizeToolbarTitle">
+        <item name="android:id">@id/toolbarTitle</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="CustomizeTabTextButtonContainer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="CustomizeTabTextButton">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sel_toolbar_tab_text</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/sel_toolbar_tab_bg</item>
+    </style>
+
+    <!-- end of toolbar -->
+
+</resources>

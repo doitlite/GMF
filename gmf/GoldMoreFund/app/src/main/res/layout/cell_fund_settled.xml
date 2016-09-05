@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/sel_cell_bg_default">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="小超人精选2号"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/label_extra_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/label_title"
+            android:layout_below="@id/label_title"
+            android:text="2015.1.1-2015.6.30 收益 +2345.32"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/label_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/label_title"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/label_title"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="沪深"
+            android:textColor="@color/gmf_text_red"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@mipmap/ic_arrow_right_dark"
+        android:textColor="@color/gmf_text_grey"/>
+
+    <View style="@style/BorderLineHorizontal"/>
+
+    <View
+        style="@style/BorderLineHorizontal"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

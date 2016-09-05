@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/gmf_act_bg"
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/section_header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/gmf_keyboard_header_bg">
+
+            <FrameLayout
+                android:id="@+id/btn_cancel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="#E5E5E5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_delete"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/header_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_cancel">
+
+                <LinearLayout
+                    android:id="@+id/header_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/label_stock_name_and_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:text="罗牛山 | 000735"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/label_last_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="16.80"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/label_turnover"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="成交额"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/label_change_ratio"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="+1.25"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/label_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="2016-02-23 11:28"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/header_times_long_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/label_last_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="价格6.34"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/label_change_ratio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/label_last_price"
+                        android:gravity="center"
+                        android:text="涨幅+0.15%"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/label_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/label_change_ratio"
+                        android:gravity="center"
+                        android:text="成交 265"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/label_average_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/label_volume"
+                        android:gravity="center"
+                        android:text="均价 6.43"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/label_date"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="02-22 10:28"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/header_kline_long_click"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/label_open_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="开盘 6.25"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/label_max_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/label_open_price"
+                        android:gravity="center"
+                        android:text="最高 6.80"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/label_min_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/label_max_price"
+                        android:gravity="center"
+                        android:text="最低 6.12"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/label_close_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/label_min_price"
+                        android:gravity="center"
+                        android:text="收盘 6.43"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/label_change_ratio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/label_close_price"
+                        android:gravity="center"
+                        android:text="涨幅+0.15%"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/label_date"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="2016-02-23"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/gmf_white"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/container_fragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@color/gmf_white"/>
+
+            <LinearLayout
+                android:id="@+id/section_type"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container_authority_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/label_authority_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="不复权"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_authority_forward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="前复权"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_authority_backward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="后复权"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+                <View style="@style/BorderLineHorizontal"/>
+
+                <LinearLayout
+                    android:id="@+id/container_spec_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tab_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="成交量"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_macd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="MACD"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_kdj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="KDJ"
+                        android:textColor="#A9A9A9"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_rsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="RSI"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_boll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="BOLL"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gmf_keyboard_header_bg">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                app:tabIndicatorColor="@color/gmf_black"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/gmf_text_black"
+                app:tabTextColor="@color/gmf_text_grey"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layer_loading"/>
+
+    <include layout="@layout/layer_reload"/>
+
+</FrameLayout>

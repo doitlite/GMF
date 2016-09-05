@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_red">
+
+        <TextView style="@style/CustomizeToolbarTitle" />
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <com.yale.ui.support.AdvanceSwipeRefreshLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:elevation="0dp">
+
+                    <RelativeLayout
+                        android:id="@+id/header_leaderboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@color/gmf_red"
+                        app:layout_scrollFlags="scroll">
+
+                        <TextView
+                            android:id="@+id/label_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="2dp"
+                            android:text="收益牛人榜"
+                            android:textColor="@color/gmf_text_white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/label_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="36dp"
+                            android:layout_marginTop="38dp"
+                            android:text="【绝对收益】指标中筛选得分前20的牛人，反应牛人的盈利能力，绝对收益越高的牛人，盈利能力越强，越会赚钱。"
+                            android:textColor="@color/gmf_text_white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/label_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="16dp"
+                            android:text="最后更新：2016-02-16 14:00"
+                            android:textColor="#80FFFFFF"
+                            android:textSize="10sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/bg_leaderboard_header" />
+                    </RelativeLayout>
+
+                    <include
+                        android:id="@+id/header_list"
+                        layout="@layout/header_user_leaderboard" />
+                </android.support.design.widget.AppBarLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
+        </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+    </FrameLayout>
+</LinearLayout>

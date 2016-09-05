@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/GMFBackButton_Light"
+                android:text="取消" />
+
+            <TextView
+                style="@style/CustomizeToolbarTitle"
+                android:text="绑定银行卡"
+                android:textColor="@color/gmf_text_white" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.goldmf.GMFund.widget.BindCNCardInfoCell
+                android:id="@+id/cell_card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="正在与新浪支付确认绑卡状态，请稍后再试。"
+                android:textColor="@color/gmf_text_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/contact_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="如果长时间没响应，请联系客服。"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/SinaGuaranteeLabel"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="28dp" />
+    </FrameLayout>
+
+</LinearLayout>

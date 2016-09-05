@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_dialog_round"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="获得奖励"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:id="@+id/section_signing_date"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/shape_round_stroke_button_white_normal"
+            android:orientation="vertical">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_icon"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                app:placeholderImage="@mipmap/ic_score"
+                app:placeholderImageScaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/label_score_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/img_icon"
+                android:text="10积分"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/label_extra_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/label_score_account"
+                android:layout_below="@id/label_score_account"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/img_icon"
+                android:text="10积分"
+                android:textColor="#999999"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <com.goldmf.GMFund.widget.ProgressButton
+            android:id="@+id/btn_positive"
+            android:layout_width="@dimen/gmf_button_width_large"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            app:buttonTheme="red"
+            app:textSize="20sp"
+            app:text_for_loading="正在签到"
+            app:text_for_normal="确定"/>
+
+    </LinearLayout>
+
+</FrameLayout>

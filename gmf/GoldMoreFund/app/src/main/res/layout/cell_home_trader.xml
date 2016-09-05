@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@drawable/sel_cell_bg_default">
+
+    <TextView
+        android:id="@+id/label_name_and_brief"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="小超人\n操盘侠明星操盘手，擅长策略基金产品"
+        android:textColor="@color/gmf_black"
+        android:textSize="14sp"/>
+
+
+    <TextView
+        android:id="@+id/label_average_income_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="16dp"
+        android:text="平均收益\n49.37%"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_created_fund_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="120dp"
+        android:text="已管理组合\n3"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_avatar"
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"
+        app:actualImageScaleType="fitCenter"
+        app:placeholderImage="@mipmap/ic_trader_avatar_placeholder"
+        app:placeholderImageScaleType="fitCenter"/>
+
+
+    <TextView
+        android:id="@+id/label_invested_member_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:background="@color/gmf_red"
+        android:padding="4dp"
+        android:text="已有255人投资"
+        android:textColor="@color/gmf_text_white"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

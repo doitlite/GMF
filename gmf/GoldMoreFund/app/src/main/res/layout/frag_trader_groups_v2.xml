@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/label_fund_raising"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:text="投资中的组合(1)"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="14sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/list_fund_raising"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+
+                    <TextView
+                        android:id="@+id/label_fund_running"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="运行中的组合(1)"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="14sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/list_fund_running"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/container_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="1dp">
+
+                        <RelativeLayout
+                            android:id="@+id/section_fund_stop"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@color/gmf_white">
+
+                            <TextView
+                                android:id="@+id/label_fund_stop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:singleLine="true"
+                                android:text="更多已结算的组合(2)"
+                                android:textColor="@color/gmf_text_black"
+                                android:textSize="14sp"/>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:scaleType="center"
+                                android:src="@mipmap/ic_arrow_right_dark"/>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <View
+                        android:id="@+id/space"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/container_card"/>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include layout="@layout/layer_loading"/>
+
+        <include layout="@layout/layer_reload"/>
+
+    </FrameLayout>
+
+</LinearLayout>

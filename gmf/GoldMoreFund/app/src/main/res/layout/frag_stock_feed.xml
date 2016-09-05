@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yale.ui.support.AdvanceSwipeRefreshLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/section_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/gmf_dynamic_height_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/ic_warning" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:text="暂无动态"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="6dp"
+                        android:text="暂无牛人动态，去看看自选股吧"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+                app:layout_behavior="@string/gmf_app_bar_layout_behavior">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gmf_white"
+                    android:orientation="vertical"
+                    app:layout_scrollFlags="scroll">
+
+                    <LinearLayout
+                        android:id="@+id/table_rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gmf_white"
+                        android:orientation="vertical" />
+
+                    <View style="@style/SepLineHorizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/section_index"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/section_live"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <View style="@style/SepLineHorizontal" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:background="@mipmap/ic_live" />
+
+                            <com.goldmf.GMFund.widget.LoopPlayTextsView
+                                android:id="@+id/loopView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+
+                                android:layout_marginLeft="4dp"
+                                android:layout_toRightOf="@id/image"
+                                app:childMargin="32dp"
+                                app:scrollIntervalInMills="24"
+                                app:scrollStepInPx="1dp"
+                                app:textColor="@color/gmf_text_black"
+                                app:textSize="12sp">
+
+                            </com.goldmf.GMFund.widget.LoopPlayTextsView>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View style="@style/SepLineHorizontal" />
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/header_stock_feed"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp" />
+
+                <View style="@style/SepLineHorizontal" />
+
+
+            </android.support.design.widget.AppBarLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+    <include layout="@layout/layer_loading" />
+
+    <include layout="@layout/layer_reload" />
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg">
+
+    <com.yale.ui.support.AdvanceSwipeRefreshLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/header_award_record"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+    <include layout="@layout/layer_reload"/>
+
+    <include layout="@layout/layer_loading"/>
+
+    <FrameLayout
+        android:id="@+id/section_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.goldmf.GMFund.widget.EmptyLayer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:subtitle=""
+            app:title="还没有佣金记录"/>
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/gmf_act_bg">
+
+    <LinearLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gmf_white"
+            android:padding="16dp">
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/section_operate"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_widthPercent="61%">
+
+                    <RelativeLayout
+                        android:id="@+id/section_stock_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@drawable/shape_stock_edit_text_bg">
+
+                        <TextView
+                            android:id="@+id/label_stock_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:hint="股票代码"
+                            android:text=""
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/label_stock_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="罗牛山"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+
+                    <com.goldmf.GMFund.widget.PriceControlView
+                        android:id="@+id/priceControl"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/section_stock_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/shape_stock_edit_text_bg">
+
+                        <TextView
+                            android:id="@+id/label_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:text="可买9200股"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="12sp"/>
+
+
+                        <EditText
+                            android:id="@+id/field_count"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/label_hint"
+                            android:background="@null"
+                            android:ellipsize="start"
+                            android:hint="买入量"
+                            android:inputType="phone"
+                            android:textColor="@color/gmf_text_grey"
+                            android:textSize="16sp"/>
+
+                    </RelativeLayout>
+
+                    <android.support.percent.PercentRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="16dp">
+
+                        <Button
+                            android:id="@+id/btn_buy_or_sell"
+                            style="@style/GMFRoundButton.Blue"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:text="买入"
+                            app:layout_widthPercent="46%"/>
+
+                        <Button
+                            android:id="@+id/btn_buy_or_sell_market"
+                            style="@style/GMFRoundButton.Blue"
+                            android:layout_width="0px"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:text="市价买入"
+                            app:layout_widthPercent="46%"/>
+                    </android.support.percent.PercentRelativeLayout>
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/section_five_order"
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:layout_alignBottom="@id/section_operate"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/section_operate"
+                    android:orientation="vertical"
+                    app:layout_widthPercent="36%">
+
+                    <View
+                        style="@style/BorderLineHorizontal"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_ask5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:title="卖5"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_ask4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="卖4"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_ask3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="卖3"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_ask2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="卖2"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_ask1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="卖1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_bid1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:title="买1"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_bid2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="买2"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_bid3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="买3"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_bid4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="买4"/>
+
+                        <com.goldmf.GMFund.widget.FiveOrderCell
+                            android:id="@+id/cell_bid5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            app:title="买5"/>
+                    </LinearLayout>
+                </FrameLayout>
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/section_hold_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="97"
+                    android:paddingLeft="10dp"
+                    android:text="股票/代码"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"
+                    app:layout_widthPercent="28%"/>
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="0px"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="89"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="持有/可卖"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"
+                    app:layout_widthPercent="28%"/>
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="89"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="现价/成本"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"
+                    app:layout_widthPercent="22%"/>
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="97"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="浮动盈亏"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"
+                    app:layout_widthPercent="22%"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/SepLineHorizontal"
+                android:background="#0D000000"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layer_loading"/>
+
+
+</FrameLayout>

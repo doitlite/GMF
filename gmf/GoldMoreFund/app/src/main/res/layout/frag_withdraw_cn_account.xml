@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_centerInParent="true"
+            android:text="提现"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/section_notification"/>
+
+            <com.goldmf.GMFund.widget.BindCNCardInfoCell
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:action_type="withdraw_from_sina"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gmf_list_cell_height"
+                android:layout_marginTop="20dp"
+                android:background="@color/gmf_white">
+
+                <EditText
+                    android:id="@+id/field_amount"
+                    style="@style/GMFEditText"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="start"
+                    android:hint="本次最多提现 12,000.00元"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:padding="0px"/>
+
+                <View
+                    style="@style/BorderLineHorizontal"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btn_withdraw"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:text="提现"
+                android:textSize="@dimen/gmf_button_text_size_large"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/InsuranceGuaranteeLabel"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="20dp"/>
+    </FrameLayout>
+</LinearLayout>

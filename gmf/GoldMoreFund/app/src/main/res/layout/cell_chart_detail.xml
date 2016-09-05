@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/section_chart_detail"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:background="@color/gmf_white"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="17.92"
+        android:textSize="48sp"/>
+
+    <LinearLayout
+        android:id="@+id/section_times_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_column_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成交 206"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/label_column_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="涨幅 +0.15%"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/label_column_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="均价 6.43"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/section_kline_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/label_column_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开盘 6.25"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/label_column_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="最高 6.80"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/label_column_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="最低 6.12"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/label_column_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="收盘 6.43"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

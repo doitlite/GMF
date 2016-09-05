@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sel_fund_card_bg"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_match_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_sign_in"/>
+
+        <TextView
+            android:id="@+id/label_match_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_cover"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="月月股神争霸(21期)"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_match_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/label_match_name"
+            android:layout_marginRight="16dp"
+            android:text="21"
+            android:textColor="@color/gmf_text_red"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/label_match_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_match_name"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:text="进行中 | 12天后比赛结束"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label_match_brief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/label_match_state"
+            android:layout_marginRight="16dp"
+            android:text="排名"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_match_state" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+
+

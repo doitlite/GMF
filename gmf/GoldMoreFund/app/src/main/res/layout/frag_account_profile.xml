@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+            <TextView
+                style="@style/CustomizeToolbarTitle"
+                android:text="@string/act_edit_profile_title_main" />
+
+        </android.support.v7.widget.Toolbar>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contact_customer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="已认证的操盘手 如需修改昵称头像,请联系客服"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/cell_edit_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:background="@drawable/sel_cell_bg_default">
+
+                        <View style="@style/BorderLineHorizontal" />
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="20dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="头像"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/ic_arrow_right_dark" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/img_avatar"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/img_arrow"
+                            app:placeholderImage="@mipmap/ic_avatar_placeholder"
+                            app:roundAsCircle="true" />
+                    </RelativeLayout>
+
+                    <com.goldmf.GMFund.widget.BasicCell
+                        android:id="@+id/cell_edit_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:extraTitle="未设置"
+                        app:hideIcon="true"
+                        app:lineBottom="true"
+                        app:lineBottomHasMarginLeft="true"
+                        app:title="昵称" />
+
+                    <com.goldmf.GMFund.widget.BasicCell
+                        android:id="@+id/cell_edit_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:extraTitle="未设置"
+                        app:hideIcon="true"
+                        app:lineBottom="true"
+                        app:title="常居住地" />
+
+                    <com.goldmf.GMFund.widget.BasicCell
+                        android:id="@+id/cell_edit_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:extraTitle="未设置"
+                        app:hideIcon="true"
+                        app:lineBottom="true"
+                        app:title="管理收货地址" />
+                </LinearLayout>
+
+
+                <com.goldmf.GMFund.widget.BasicCell
+                    android:id="@+id/cell_risk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:extraTitle="未填写"
+                    app:lineBottom="true"
+                    app:lineBottomHasMarginLeft="true"
+                    app:lineTop="true"
+                    app:title="风险评测" />
+
+                <com.goldmf.GMFund.widget.BasicCell
+                    android:id="@+id/cell_verify_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:extraTitle="已认证"
+                    app:hideIcon="true"
+                    app:lineBottom="true"
+                    app:lineBottomHasMarginLeft="true"
+                    app:title="实名认证" />
+
+                <com.goldmf.GMFund.widget.BasicCell
+                    android:id="@+id/cell_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:extraTitle="18575681670"
+                    app:hideIcon="true"
+                    app:lineBottom="true"
+                    app:title="手机号" />
+
+                <com.goldmf.GMFund.widget.BasicCell
+                    android:id="@+id/cell_modify_login_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:extraTitle="修改"
+                    app:hideIcon="true"
+                    app:lineBottom="true"
+                    app:lineBottomHasMarginLeft="true"
+                    app:lineTop="true"
+                    app:title="登录密码" />
+
+                <com.goldmf.GMFund.widget.BasicCell
+                    android:id="@+id/cell_wechat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:extraTitle="未绑定"
+                    app:hideIcon="true"
+                    app:lineBottom="true"
+                    app:lineTop="true"
+                    app:title="绑定微信" />
+
+                <com.goldmf.GMFund.widget.BasicCell
+                    android:id="@+id/cell_hide_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:hideIcon="true"
+                    app:lineBottom="true"
+                    app:lineTop="true"
+                    app:title="隐私设置" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

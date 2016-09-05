@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical"
+    tools:layout_marginTop="25dp">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="我管理的组合" />
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="创建组合"
+            android:textColor="@color/gmf_text_white"
+            android:textSize="14sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                app:tabIndicatorColor="@color/gmf_black"
+                android:background="@color/gmf_white"
+                app:tabSelectedTextColor="@color/gmf_text_black"
+                app:tabTextColor="@color/gmf_text_grey" />
+
+            <com.yale.ui.support.AdvanceSwipeRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+        </LinearLayout>
+
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+
+        <ScrollView
+            android:id="@+id/section_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/label_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:textColor="#383523"
+                    android:textSize="14sp"
+                    tools:background="@color/gmf_white"
+                    tools:text="小超人：
+
+首先，感谢你对平台的信任申请成为操盘侠平台的
+股市牛人。
+
+操盘侠是一个公平、透明、靠谱的平台，致力于互联网金融向垂直领域发展，满足用户深层次的金融服务需求；操盘侠需要这样自信的你、怀抱着拥有一颗希望成为真正职业资产管理人的心，勇敢站出来为中国股市里的散户服务，同时成就自己。
+
+操盘乐是操盘侠推出的由合格牛人领投、投资人跟投的股票合买投资产品，只需简单几步即可创建；同时操盘侠提供高效稳定的股票交易和资产管理软件，让你轻松操盘。
+
+新的旅程，即将开始，点击下方开启第一个操盘之旅。" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp" />
+
+                <Button
+                    android:id="@+id/btn_create_bottom"
+                    style="@style/GMFRoundButton.Yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gmf_button_height_large"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="创建第一个操盘乐组合"
+                    android:textSize="@dimen/gmf_button_text_size_large" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </FrameLayout>
+</LinearLayout>

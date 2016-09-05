@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="@color/gmf_white"
+    android:orientation="vertical">
+
+    <View style="@style/SepLineHorizontal" />
+
+    <View
+        style="@style/SepLineHorizontal"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="排名"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="110dp"
+        android:gravity="center"
+        android:text="牛人"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:text="收益"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp" />
+
+</RelativeLayout>

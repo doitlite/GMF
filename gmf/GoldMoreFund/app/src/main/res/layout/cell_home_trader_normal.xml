@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/container_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/area_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sel_cell_bg_default"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginRight="64dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_fund_title"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="牛人牛股系列01期（新手专享）"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label_stock_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:text="沪深"
+                    android:textColor="@color/gmf_text_red"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                app:placeholderImage="@mipmap/ic_fund_cover_placeholder"
+                app:placeholderImageScaleType="centerCrop"
+                app:viewAspectRatio="2.5" />
+
+            <TextView
+                android:id="@+id/label_column_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_cover"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="2dp"
+                android:text="预期规模\n10万元"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/label_column_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/label_column_1"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:text="组合期限\n3个月"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/label_column_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/label_column_1"
+                android:gravity="right"
+                android:lineSpacingExtra="2dp"
+                android:paddingRight="16dp"
+                android:text="已投资\n0元"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_action"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/label_column_1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="投资组合"
+                android:textSize="@dimen/gmf_button_text_size_large"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:id="@+id/img_fund_type"
+        android:layout_width="48dp"
+        android:layout_height="28dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/right_margin_of_fund_card_cell"
+        android:layout_marginTop="17dp"
+        android:elevation="2dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_fund_type_bonus" />
+
+</FrameLayout>

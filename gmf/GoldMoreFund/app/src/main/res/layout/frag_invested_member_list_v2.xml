@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg">
+
+    <LinearLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="序号"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"
+                app:layout_widthPercent="15%"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/text1"
+                android:gravity="left"
+                android:text="时间"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"
+                app:layout_widthPercent="20%"/>
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/text2"
+                android:gravity="left"
+                android:text="投资人"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"
+                app:layout_widthPercent="35%"/>
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/text3"
+                android:gravity="right"
+                android:text="金额(元)"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"
+                app:layout_widthPercent="30%"/>
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:background="@color/gmf_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/layer_loading_nested"/>
+
+    <include layout="@layout/layer_reload_nested"/>
+
+    <include layout="@layout/layer_empty_nested"/>
+
+</FrameLayout>

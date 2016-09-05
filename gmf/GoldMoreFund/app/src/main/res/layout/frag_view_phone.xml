@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="手机号"/>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gmf_list_cell_height"
+        android:layout_marginTop="24dp"
+        android:background="@color/gmf_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="手机"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/label_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="108dp"
+            android:text="186******46"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="16sp"/>
+
+        <View style="@style/BorderLineHorizontal"/>
+
+        <View
+            style="@style/BorderLineHorizontal"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_modify_phone"
+        style="@style/GMFRoundButton.Yellow"
+        android:layout_width="@dimen/gmf_button_width_large"
+        android:layout_height="@dimen/gmf_button_height_large"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="修改手机号码"
+        android:textSize="@dimen/gmf_button_text_size_large"/>
+
+    <TextView
+        android:id="@+id/contact_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="如手机已丢失或停用,请联系客服"
+        android:textColor="@color/gmf_text_light_grey"
+        android:textSize="14sp"/>
+
+</LinearLayout>

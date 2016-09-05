@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/gmf_white"
+          android:gravity="center"
+          android:paddingBottom="20dp"
+          android:paddingTop="20dp"
+          android:text="查看更早提醒"
+          android:textColor="@color/gmf_black"
+          android:textSize="12sp"
+          tools:layout_marginTop="25dp"/>

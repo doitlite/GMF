@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- special value -->
+    <dimen name="right_margin_of_fund_card_cell">6dp</dimen>
+    <dimen name="right_margin_of_trader_card_cell_crossing">6dp</dimen>
+    <dimen name="right_margin_of_trader_card_cell_grid">1dp</dimen>
+    <dimen name="top_margin_of_fund_card_cell">20dp</dimen>
+</resources>

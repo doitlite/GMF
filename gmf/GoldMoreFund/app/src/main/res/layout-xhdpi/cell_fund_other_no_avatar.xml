@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sel_cell_bg_default">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/btn_join"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="无限滚雪球A股精选组合"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/label_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_title"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="小超人 2015.07.28 创建"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/label_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/label_title"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/label_title"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:text="沪深"
+                android:textColor="@color/gmf_text_red"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/SepLineHorizontal"
+        android:layout_below="@id/header"
+        android:layout_marginLeft="16dp"/>
+
+    <RelativeLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/line1">
+
+        <TextView
+            android:id="@+id/label_net_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="单位净值\n1,000,000"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/label_raised_money_or_invested_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="140dp"
+            android:text="资金规模￥\n1,328,000"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/label_running_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="272dp"
+            android:text="已运行\n90天"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <View
+            style="@style/SepLineVertical"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"/>
+
+        <View
+            style="@style/SepLineVertical"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="256dp"/>
+
+    </RelativeLayout>
+
+    <View style="@style/SepLineHorizontal"/>
+
+    <View
+        style="@style/SepLineHorizontal"
+        android:layout_below="@id/contentPanel"/>
+
+</RelativeLayout>

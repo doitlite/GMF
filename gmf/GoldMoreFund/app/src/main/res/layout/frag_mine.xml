@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_yellow">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_gravity="center"
+            android:text="我的"
+            android:textColor="@color/gmf_text_black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right">
+
+            <ImageButton
+                android:id="@+id/menu_more"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_menu_more" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+
+        <FrameLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/section_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_act_bg"
+                android:visibility="visible">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="64dp">
+
+                        <RelativeLayout
+                            android:id="@+id/section_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:paddingTop="11dp"
+                            android:paddingBottom="11dp"
+                            android:background="@color/gmf_white">
+
+                            <View style="@style/SepLineHorizontal" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/img_avatar"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="12dp"
+                                app:placeholderImage="@mipmap/ic_avatar_placeholder"
+                                app:roundAsCircle="true" />
+
+                            <ImageView
+                                android:id="@+id/img_arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="16dp"
+                                android:src="@mipmap/ic_arrow_right_dark" />
+
+
+                            <TextView
+                                android:id="@+id/label_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="64dp"
+                                android:layout_toRightOf="@id/img_avatar"
+                                android:text="路人甲"
+                                android:textColor="#333333"
+                                android:textSize="16sp" />
+
+
+                            <TextView
+                                android:id="@+id/label_brief"
+                                android:layout_width="0px"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/label_name"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_toLeftOf="@id/img_arrow"
+                                android:layout_toRightOf="@id/img_avatar"
+                                android:text="我的小金号：100001"
+                                android:textColor="#424242"
+                                android:textSize="12sp" />
+
+
+                        </RelativeLayout>
+
+                        <View style="@style/SepLineHorizontal" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="vertical">
+
+                            <View style="@style/SepLineHorizontal" />
+
+                            <LinearLayout
+                                android:id="@+id/list_fund_account"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/gmf_white"
+                                android:orientation="horizontal">
+
+                                <com.goldmf.GMFund.widget.StockAccountProfileView
+                                    android:id="@+id/cell_cn_account"
+                                    android:layout_width="0px"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <View
+                                    android:id="@+id/line1"
+                                    style="@style/SepLineVertical"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_marginTop="16dp" />
+
+                                <com.goldmf.GMFund.widget.StockAccountProfileView
+                                    android:id="@+id/cell_hk_account"
+                                    android:layout_width="0px"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <View
+                                    android:id="@+id/line2"
+                                    style="@style/SepLineVertical"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_marginTop="16dp" />
+
+
+                                <com.goldmf.GMFund.widget.StockAccountProfileView
+                                    android:id="@+id/cell_simulate_account"
+                                    android:layout_width="0px"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                            <View style="@style/SepLineHorizontal" />
+
+                        </LinearLayout>
+
+                        <com.goldmf.GMFund.widget.BasicCell
+                            android:id="@+id/cell_cash_journal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            app:hideIcon="false"
+                            app:icon="@mipmap/ic_capital"
+                            app:lineBottom="true"
+                            app:lineBottomHasMarginLeft="true"
+                            app:lineTop="true"
+                            app:title="资金明细" />
+
+                        <com.goldmf.GMFund.widget.BasicCell
+                            android:id="@+id/cell_award"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hideIcon="false"
+                            app:icon="@mipmap/ic_award"
+                            app:lineBottom="true"
+                            app:lineBottomHasMarginLeft="true"
+                            app:title="佣金" />
+
+                        <com.goldmf.GMFund.widget.BasicCell
+                            android:id="@+id/cell_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hideIcon="false"
+                            app:icon="@mipmap/ic_score"
+                            app:lineBottom="true"
+                            app:lineBottomHasMarginLeft="true"
+                            app:title="积分" />
+
+                        <com.goldmf.GMFund.widget.BasicCell
+                            android:id="@+id/cell_coupon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hideIcon="false"
+                            app:icon="@mipmap/ic_coupon_mini"
+                            app:lineBottom="true"
+                            app:title="投资红包" />
+
+                        <com.goldmf.GMFund.widget.BasicCell
+                            android:id="@+id/cell_managed_groups"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:visibility="visible"
+                            app:hideIcon="false"
+                            app:icon="@mipmap/ic_managed_groups"
+                            app:lineBottom="true"
+                            app:lineTop="true"
+                            app:title="我管理的组合" />
+
+                        <com.goldmf.GMFund.widget.BasicCell
+                            android:id="@+id/cell_feedback"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:visibility="visible"
+                            app:hideIcon="false"
+                            app:icon="@mipmap/ic_mine_feedback"
+                            app:lineBottom="true"
+                            app:lineTop="true"
+                            app:title="反馈建议" />
+
+                        <com.goldmf.GMFund.widget.BasicCell
+                            android:id="@+id/cell_dev"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:visibility="gone"
+                            app:hideIcon="false"
+                            app:icon="@mipmap/ic_dev"
+                            app:lineBottom="true"
+                            app:lineTop="true"
+                            app:title="开发者模式" />
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <ScrollView
+                android:id="@+id/section_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_act_bg"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="64dp">
+
+                    <RelativeLayout
+                        android:id="@+id/section_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/gmf_white">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/img_avatar"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="12dp"
+                            app:placeholderImage="@mipmap/ic_avatar_placeholder"
+                            app:roundAsCircle="true" />
+
+                        <TextView
+                            android:id="@+id/label_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_toRightOf="@id/img_avatar"
+                            android:text="未登录"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/img_user_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/label_name"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="4dp"
+
+                            android:layout_toRightOf="@id/label_name" />
+
+                        <TextView
+                            android:id="@+id/label_brief"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/label_name"
+                            android:layout_below="@id/label_name"
+                            android:text="立即登录参与投资"
+                            android:textColor="#424242"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/ic_arrow_right_dark" />
+
+                    </RelativeLayout>
+
+                    <com.goldmf.GMFund.widget.BasicCell
+                        android:id="@+id/cell_dev"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        app:hideIcon="false"
+                        app:icon="@mipmap/ic_dev"
+                        app:lineBottom="true"
+                        app:lineTop="true"
+                        app:title="开发者模式" />
+
+                    <LinearLayout
+                        android:id="@+id/section_qa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+    </FrameLayout>
+</LinearLayout>

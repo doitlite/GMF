@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_gravity="center_horizontal"
+            android:text="股票大赛"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_white"
+                android:paddingLeft="74dp"
+                android:paddingRight="74dp">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+
+                    app:tabIndicatorColor="@color/gmf_black"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/gmf_text_black"
+                    app:tabTextColor="@color/gmf_text_grey"/>
+
+                <View
+                    style="@style/SepLineHorizontal"
+                    android:layout_gravity="bottom"/>
+            </FrameLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/layer_loading"/>
+
+        <include layout="@layout/layer_reload"/>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+@startuml
+
+title Simple Class Diagram
+
+package "Package One" {
+class Class01 {
+    - mField1 : Int
+    - mField2 : String
+    - mField3 : String
+    + func1() : String
+    # func2() : void
+    - func3() : String
+}
+
+class Class02
+}
+
+package "Package Two" {
+class Class03
+class Class04
+}
+
+Class01  <|-- Class02
+Class03 o-- Class04
+
+@enduml

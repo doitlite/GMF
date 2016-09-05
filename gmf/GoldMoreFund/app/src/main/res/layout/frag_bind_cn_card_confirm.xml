@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+            <TextView
+                style="@style/CustomizeToolbarTitle"
+                android:text="绑定银行卡"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:src="@mipmap/bg_bind_card_confirm"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/contact_customer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="每一个注册账户，实名认证后只能绑定一张名下安全银行卡，绑定后进行的充值和提现等操作，只能通过这一张银行卡来完成。\n\n同卡进出安全策略能够在最大程度保障您的资金安全，因为您的所有资金只能提现到充值银行卡，即使发生手机丢失，或银行卡账号泄露等情况，资金也不能被提取到其他银行卡上，这样不法分子就无法盗取您的资金。因此，从安全性上，做了充分的保障，这也是操盘侠选择资金同卡进出安全策略的原因。\n\n如需更换卡片或其他相关功能帮助，请联系客服。"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="14sp"/>
+        </ScrollView>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="@color/gmf_white"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/GMFRoundButton.Yellow"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_medium"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="开始绑卡"
+                android:textSize="@dimen/gmf_button_text_size_large"/>
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

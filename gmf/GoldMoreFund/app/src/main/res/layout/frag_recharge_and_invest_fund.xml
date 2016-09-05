@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/GMFBackButton_Light"
+                android:text="取消" />
+
+            <TextView
+                style="@style/CustomizeToolbarTitle"
+                android:text="投资组合" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/section_notification" />
+
+            <com.goldmf.GMFund.widget.BindCNCardInfoCell
+                android:id="@+id/cell_card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="109dp"
+                android:background="@color/gmf_white">
+
+                <TextView
+                    android:id="@+id/label_invest_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="充值 5,000"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/label_invest_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_invest_amount"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="总投资10万，受银行额度限制，需分多次充值"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_invest_hint"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_invested_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@mipmap/ic_square_yellow"
+                        android:drawablePadding="8dp"
+                        android:text="已投资 0"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/label_need_to_invest_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@mipmap/ic_square_grey"
+                        android:drawablePadding="8dp"
+                        android:text="需再投资 10万"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress"
+
+                    style="@style/HorizontalProgressBar.Yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:progress="60" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/label_send_code_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="2dp"
+                android:text="短信验证码已发 186 **** 1234，如遇延迟请耐心等待"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gmf_list_cell_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_edit_text_round">
+
+                <Button
+                    android:id="@+id/btn_send_code"
+                    style="@style/GMFRoundButton.Yellow"
+                    android:layout_width="@dimen/gmf_button_width_small"
+                    android:layout_height="@dimen/gmf_button_height_small"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:text="发送验证码"
+                    android:textSize="@dimen/gmf_button_text_size_small" />
+
+                <EditText
+                    android:id="@+id/field_code"
+                    style="@style/GMFEditText"
+                    android:layout_toLeftOf="@id/btn_send_code"
+                    android:background="@android:color/transparent"
+                    android:hint="请输入短信验证码"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone" />
+            </RelativeLayout>
+
+            <com.goldmf.GMFund.widget.ProgressButton
+                android:id="@+id/btn_invest"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                app:buttonTheme="yellow"
+                app:text_for_loading="正在投资..."
+                app:text_for_normal="充值并投资" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/SinaGuaranteeLabel"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@mipmap/ic_sina_mini" />
+
+    </FrameLayout>
+
+</LinearLayout>

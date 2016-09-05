@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_yellow">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_gravity="center"
+            android:text="投资"
+            android:textColor="@color/gmf_text_black" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yale.ui.support.AdvanceSwipeRefreshLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/coordinatorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gmf_yellow">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false">
+
+                    <com.goldmf.GMFund.widget.FoldableGallery
+                        android:id="@+id/gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="48dp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_collapse"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/gmf_yellow"
+                        android:src="@drawable/ic_collapse" />
+                </FrameLayout>
+
+                <com.goldmf.GMFund.widget.AdvanceNestedScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <com.goldmf.GMFund.widget.InvestHomeTopLayer
+                            android:id="@+id/layer_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            tools:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/gmf_act_bg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/label_platform"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:lineSpacingExtra="4dp"
+                                android:paddingTop="20dp"
+                                android:text="操盘侠已累计为 657 人次投资管理金额\n37,556,060 元"
+                                android:textColor="@color/gmf_black"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:id="@+id/list_fund"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp" />
+
+                            <RelativeLayout
+                                android:id="@+id/card_no_fund"
+                                android:layout_width="match_parent"
+                                android:layout_height="142dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="22dp"
+                                android:background="#E5E5E5">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="32dp"
+                                    android:src="@mipmap/ic_logo_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="暂无可投资组合，所有组合均在运行中"
+                                    android:textColor="#33000000"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="6dp">
+
+                                <com.goldmf.GMFund.widget.BasicCell
+                                    android:id="@+id/cell_more_fund"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:title="更多组合(7)" />
+
+                            </FrameLayout>
+
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="16dp">
+
+                                <com.goldmf.GMFund.widget.BasicCell
+                                    android:id="@+id/cell_more_trader"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:title="所有操盘手(4)" />
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/cell_focus_trader"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_marginRight="40dp" />
+                            </FrameLayout>
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="16dp">
+
+                                <com.goldmf.GMFund.widget.BasicCell
+                                    android:id="@+id/cell_more_talent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:title="所有操盘手(4)" />
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/cell_focus_talent"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_marginRight="40dp" />
+                            </FrameLayout>
+
+
+                            <TextView
+                                style="@style/InsuranceGuaranteeLabel"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="16dp"
+                                android:paddingBottom="44dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.goldmf.GMFund.widget.AdvanceNestedScrollView>
+
+            </android.support.design.widget.CoordinatorLayout>
+        </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+
+    </FrameLayout>
+</LinearLayout>

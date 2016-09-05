@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/container_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/cell_portfolio_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sel_cell_bg_default">
+
+
+            <TextView
+                android:id="@+id/label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="[H]春田花花幼稚园" />
+
+            <TextView
+                android:id="@+id/label_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="18成员 | 封闭期剩余 152天" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/label_name"
+                android:layout_marginRight="16dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <com.goldmf.GMFund.widget.PortfolioStateView
+                android:id="@+id/view_state"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/label_state"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp" />
+
+        </RelativeLayout>
+
+
+        <include
+            layout="@layout/layer_portfolio_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

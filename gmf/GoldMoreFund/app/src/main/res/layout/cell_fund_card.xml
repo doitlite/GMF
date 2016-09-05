@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_marginTop="25dp">
+
+    <RelativeLayout
+        android:id="@+id/card_detail"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/sel_fund_card_bg"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@mipmap/ic_award_placeholder"
+                app:placeholderImageScaleType="fitCenter"
+                app:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/img_icon"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/label_name"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="赢多点点03期-看涨型"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label_income_or_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="6~16%"
+                    android:textColor="@color/gmf_text_red"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@id/img_icon"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/label_duration"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="50,000元 · 3个月"
+                    android:textColor="@color/gmf_text_light_grey"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_position"
+                    style="@style/HorizontalProgressBar.Grey_Dark"
+                    android:layout_width="60dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/label_income_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="预期年化收益"
+                    android:textColor="@color/gmf_text_light_grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_fund_tag"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.5dp"
+                android:layout_marginTop="0.5dp" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_detail"
+            style="@style/HorizontalProgressBar.Yellow.Round"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="72dp"
+            android:max="10000"
+            android:progress="2000" />
+
+        <TextView
+            android:id="@+id/label_detail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="72dp"
+            android:gravity="center"
+            android:text="2 天 14 小时 32 分钟 后开放投资"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/label_detail_left"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="72dp"
+            android:gravity="left|center_vertical"
+            android:text="已投资23.32万元"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label_detail_right"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="72dp"
+            android:gravity="right|center_vertical"
+            android:text="123% 超额"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_detail" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/card_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/sel_fund_card_bg"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                app:actualImageScaleType="fitCenter"
+                app:placeholderImage="@mipmap/ic_award_placeholder"
+                app:placeholderImageScaleType="fitCenter"
+                app:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/img_icon"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/label_name"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="赢多点点03期-看涨型"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label_income_or_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="6~16%"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_toRightOf="@id/img_icon"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/label_duration"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="50,000元 · 3个月"
+                    android:textColor="@color/gmf_text_light_grey"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_position"
+                    style="@style/HorizontalProgressBar.Grey_Dark"
+                    android:layout_width="60dp"
+                    android:layout_height="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/label_income_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="预期年化收益"
+                    android:textColor="@color/gmf_text_light_grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_fund_tag"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="0.5dp"
+                android:layout_marginTop="0.5dp"
+                app:actualImageScaleType="fitCenter" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/section_extra"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <View
+                style="@style/SepLineHorizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/label_total_capital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="组合金额\n90,000.00"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/label_today_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="当日盈亏\n90,000.00"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/label_total_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:gravity="right"
+                android:text="总盈亏\n90,000.00"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/card_invested"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/gmf_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_left_big"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="16dp"
+            android:text="小超人逆袭一号"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp"
+            app:layout_widthPercent="50%" />
+
+        <TextView
+            android:id="@+id/label_left_small"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="16dp"
+            android:text="227天"
+            android:textColor="@color/gmf_text_light_grey"
+            android:textSize="10sp"
+            app:layout_widthPercent="50%" />
+
+        <TextView
+            android:id="@+id/label_medium_big"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/label_left_big"
+            android:text="5,000"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp"
+            app:layout_widthPercent="20%" />
+
+        <TextView
+            android:id="@+id/label_right_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:paddingRight="16dp"
+            android:text="+545.23"
+            android:textColor="@color/gmf_text_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label_right_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@mipmap/ic_annual_income"
+            android:drawablePadding="4dp"
+            android:gravity="right"
+            android:paddingRight="16dp"
+            android:text="+545.23"
+            android:textColor="@color/gmf_text_red"
+            android:textSize="10sp" />
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_alignParentBottom="true" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <View
+        android:id="@+id/line_sep"
+        style="@style/SepLineHorizontal"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone" />
+</LinearLayout>

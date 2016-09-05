@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:text="今天 14:02"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:minHeight="44dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="组合投资成功"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:placeholderImage="@mipmap/ic_fund_cover_placeholder"
+                app:placeholderImageScaleType="centerCrop"
+                app:viewAspectRatio="2.5" />
+
+            <TextView
+                android:id="@+id/label_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:padding="10dp"
+                android:text="您已成功投资【小超人逆袭1号】产品3,000.00元。\n你可以在【资产】—【我投资的组合】中看到运行中的投资组合。祝你投资愉快。"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/section_link"
+                android:layout_width="match_parent"
+                android:layout_height="42dp">
+
+                <View
+                    style="@style/SepLineHorizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:id="@+id/label_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="查看详情"
+                    android:textColor="@color/gmf_text_blue"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

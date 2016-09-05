@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_white"
+                android:minHeight="48dp">
+
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="2015.09.28"
+        android:textColor="#999999"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/label_operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginTop="16dp"
+        android:text="兑换：滴滴出行30元代金券，优惠代码 BY35EB，2016年4月30日前使用。"
+        android:textColor="#333333"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/label_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="+300"
+        android:textColor="#999999"
+        android:textSize="14sp"/>
+</RelativeLayout>

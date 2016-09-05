@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_marginTop="25dp">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="设置止盈止损" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_done"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:text="完成"
+                android:textColor="@color/gmf_text_white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <ScrollView
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/group_stock_brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@color/gmf_white"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/label_stock_name_and_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"
+                        tools:text="新时达\n003452" />
+
+                    <TextView
+                        android:id="@+id/label_stock_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:lineSpacingExtra="2dp"
+                        android:textSize="16sp"
+                        tools:text="+12.72%\n+2,345.23"
+                        tools:textColor="@color/gmf_red" />
+
+                    <TextView
+                        android:id="@+id/label_stock_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="127dp"
+                        android:textColor="@color/gmf_text_black"
+                        android:textSize="16sp"
+                        tools:text="12.23\n13.56" />
+
+                </RelativeLayout>
+
+                <com.goldmf.GMFund.widget.ToggleCell
+                    android:id="@+id/cell_stop_earn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:lineTop="true"
+                    app:title="止盈" />
+
+                <LinearLayout
+                    android:id="@+id/group_stop_earn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@color/gmf_white">
+
+                        <View style="@style/SepLineHorizontal" />
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="股价涨至(元)"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toRightOf="@id/text"
+                            android:background="@android:color/transparent"
+                            android:gravity="right|center_vertical"
+                            android:hint="输入目标股价"
+                            android:inputType="numberDecimal"
+                            android:lines="1"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@color/gmf_white">
+
+                        <View style="@style/SepLineHorizontal" />
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="总盈利超过(%)"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toRightOf="@id/text">
+
+                            <EditText
+                                android:id="@+id/field_earn_ratio"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:gravity="right|center_vertical"
+                                android:hint="输入目标跌幅"
+                                android:inputType="numberDecimal"
+                                android:lines="1"
+                                android:textColor="@color/gmf_text_black"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tag_earn_ratio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:textColor="@color/gmf_text_black"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <com.goldmf.GMFund.widget.ToggleCell
+                    android:id="@+id/cell_stop_loss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:lineTop="true"
+                    app:title="止损" />
+
+                <LinearLayout
+                    android:id="@+id/group_stop_loss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@color/gmf_white">
+
+                        <View style="@style/SepLineHorizontal" />
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="股价跌至(元)"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="16sp" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toRightOf="@id/text"
+                            android:background="@android:color/transparent"
+                            android:gravity="right|center_vertical"
+                            android:hint="输入目标股价"
+                            android:inputType="numberDecimal"
+                            android:lines="1"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@color/gmf_white">
+
+                        <View style="@style/SepLineHorizontal" />
+
+                        <View
+                            style="@style/SepLineHorizontal"
+                            android:layout_alignParentBottom="true" />
+
+                        <TextView
+                            android:id="@+id/text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:text="总跌幅超过(%)"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toRightOf="@id/text">
+
+                            <EditText
+                                android:id="@+id/field_loss_ratio"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@android:color/transparent"
+                                android:gravity="right|center_vertical"
+                                android:hint="输入目标跌幅"
+                                android:inputType="numberDecimal"
+                                android:lines="1"
+                                android:textColor="@color/gmf_text_black"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tag_loss_ratio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:textColor="@color/gmf_text_black"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:text="设置止盈或止损后，将在到达目标值后自动卖出当前持仓的此股票全部数量。"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+    </FrameLayout>
+</LinearLayout>

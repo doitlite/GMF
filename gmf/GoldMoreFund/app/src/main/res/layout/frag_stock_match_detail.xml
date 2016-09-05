@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_yellow">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="加载中"
+            android:textColor="@color/gmf_text_black" />
+
+        <Button
+            android:id="@+id/btn_rule"
+            style="@style/GMFPlainButton.White"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right"
+            android:text="比赛规则"
+            android:textColor="@color/gmf_text_black"
+            android:visibility="gone" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.yale.ui.support.AdvanceSwipeRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v4.widget.NestedScrollView
+                        android:id="@+id/content_rule"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                        <com.goldmf.GMFund.widget.GMFWebview
+                            android:id="@+id/webView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </android.support.v4.widget.NestedScrollView>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <android.support.design.widget.AppBarLayout
+                        android:id="@+id/appBarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:elevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/section_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_scrollFlags="scroll">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/img_cover"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:placeholderImage="@mipmap/ic_fund_cover_placeholder"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:viewAspectRatio="2.5" />
+
+                            <RelativeLayout
+                                android:id="@+id/header_match_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="44dp"
+                                android:background="@color/gmf_yellow"
+                                android:gravity="center_vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.3"
+                                    android:background="@color/gmf_light_grey" />
+
+                                <TextView
+                                    android:id="@+id/label_match_state"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="报名中 | 3天后开赛"
+                                    android:textColor="@color/gmf_text_black"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/label_signUp_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="16dp"
+                                    android:text="3456人已报名"
+                                    android:textColor="@color/gmf_text_black"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/header_my_rank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="16dp"
+                                android:background="@color/gmf_white"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/section_rank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="52dp"
+                                    android:orientation="vertical">
+
+                                    <com.facebook.drawee.view.SimpleDraweeView
+                                        android:id="@+id/img_avatar"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp"
+                                        app:actualImageScaleType="centerCrop"
+                                        app:placeholderImage="@mipmap/ic_avatar_placeholder"
+                                        app:placeholderImageScaleType="centerCrop"
+                                        app:roundAsCircle="true" />
+
+                                    <TextView
+                                        android:id="@+id/label_user_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="56dp"
+                                        android:layout_marginTop="8dp"
+                                        android:text="股神在世"
+                                        android:textColor="@color/gmf_text_black"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/label_user_rank"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignLeft="@id/label_user_name"
+                                        android:layout_below="@id/label_user_name"
+                                        android:layout_marginTop="6dp"
+                                        android:text="股神在世"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/label_user_income_ratio"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="16dp"
+                                        android:layout_marginTop="6dp"
+                                        android:text="111.23%"
+                                        android:textColor="@color/gmf_text_red"
+                                        android:textSize="20sp" />
+
+                                </RelativeLayout>
+
+                                <View
+                                    style="@style/SepLineHorizontal"
+                                    android:layout_marginLeft="16dp" />
+
+                                <RelativeLayout
+                                    android:id="@+id/section_exchange"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp">
+
+                                    <ImageView
+                                        android:id="@+id/img_icon"
+                                        android:layout_width="24dp"
+                                        android:layout_height="18dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="20dp"
+                                        android:src="@mipmap/ic_exchange" />
+
+                                    <TextView
+                                        android:id="@+id/label_exchange_brief"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="56dp"
+                                        android:text="共盈利12,000  |  可变现12.00元"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/label_exchange_detail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="16dp"
+                                        android:gravity="center"
+                                        android:text="查看详情"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="10sp" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <include
+                            android:id="@+id/header_list"
+                            layout="@layout/header_stock_match_detail" />
+
+                    </android.support.design.widget.AppBarLayout>
+
+                </android.support.design.widget.CoordinatorLayout>
+
+            </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/section_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/gmf_white"
+                android:orientation="vertical">
+
+                <View style="@style/BorderLineHorizontal" />
+
+                <LinearLayout
+                    android:id="@+id/section_bottom_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+
+    </FrameLayout>
+
+</LinearLayout>

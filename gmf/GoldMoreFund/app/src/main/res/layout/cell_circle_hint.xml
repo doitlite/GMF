@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_white"
+                android:padding="10dp"
+                tools:layout_marginBottom="48dp"
+                tools:layout_marginTop="25dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_avatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:roundAsCircle="true"
+        app:placeholderImage="@mipmap/ic_avatar_placeholder"/>
+
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="70dp"
+        android:layout_toRightOf="@id/img_avatar"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"
+        tools:text="花狐狸"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_preview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        app:placeholderImage="@color/gmf_light_grey"/>
+
+    <TextView
+        android:id="@+id/label_message"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textSize="12sp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/gmf_text_black"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:id="@+id/section_content"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_name"
+        android:layout_alignRight="@id/label_name"
+        android:layout_below="@id/label_name"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="6dp"
+            android:src="@mipmap/ic_circle_reward"/>
+
+        <TextView
+            android:id="@+id/label_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            tools:text="好久没看，今天进去看了一眼，发现我有一只股票居然改名了！我还以为谁帮我买了一只我不认识的股票。。。"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_name"
+        android:layout_alignRight="@id/label_name"
+        android:layout_below="@id/section_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp"
+        tools:text="1月25日 07:23"/>
+</RelativeLayout>

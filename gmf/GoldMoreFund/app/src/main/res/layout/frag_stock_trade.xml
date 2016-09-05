@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="模拟盘" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@color/gmf_status_bar_black"
+        app:paddingEnd="18dp"
+        app:paddingStart="18dp"
+        app:tabIndicatorColor="@color/gmf_white"
+        app:tabSelectedTextColor="@color/gmf_text_white"
+        app:tabTextColor="#66FFFFFF" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@color/gmf_act_bg">
+
+        <com.yale.ui.support.AdvanceSwipeRefreshLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+
+        <com.goldmf.GMFund.widget.GMFWebview
+            android:id="@+id/webView_invisible"
+            android:layout_width="0px"
+            android:layout_height="0px" />
+    </FrameLayout>
+
+    <com.goldmf.GMFund.widget.InputAccessoryView
+        android:id="@+id/accessoryView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

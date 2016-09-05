@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+                    <android.support.design.widget.AppBarLayout
+                        android:id="@+id/appBarLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:elevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/section_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_scrollFlags="scroll">
+
+                            <LinearLayout
+                                android:id="@+id/header_my_rank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="16dp"
+                                android:background="@color/gmf_white"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/section_rank"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="52dp"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/img_rank"
+                                        android:layout_width="28dp"
+                                        android:layout_height="32dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="12dp"/>
+
+                                    <TextView
+                                        android:id="@+id/label_rank"
+                                        android:layout_width="28dp"
+                                        android:layout_height="32dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="12dp"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="center"
+                                        android:text="20"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="20sp"/>
+
+                                    <com.goldmf.GMFund.widget.UserAvatarView
+                                        android:id="@+id/img_avatar"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="42dp"
+                                        app:actualImageScaleType="centerCrop"
+                                        app:placeholderImage="@mipmap/ic_avatar_placeholder"
+                                        app:placeholderImageScaleType="centerCrop"
+                                        app:roundAsCircle="true"/>
+
+                                    <TextView
+                                        android:id="@+id/label_user_income_ratio"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="16dp"
+                                        android:layout_marginTop="6dp"
+                                        android:text="111.23%"
+                                        android:textColor="@color/gmf_text_red"
+                                        android:textSize="20sp"/>
+
+                                    <RelativeLayout
+                                        android:id="@+id/section_name_and_sign"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_toLeftOf="@id/label_user_income_ratio"
+                                        android:layout_toRightOf="@id/img_avatar">
+
+                                        <TextView
+                                            android:id="@+id/label_user_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:maxLines="1"
+                                            android:text="股神在世"
+                                            android:textColor="@color/gmf_text_black"
+                                            android:textSize="14sp"/>
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/label_user_rank"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignLeft="@id/section_name_and_sign"
+                                        android:layout_below="@id/section_name_and_sign"
+                                        android:layout_marginTop="6dp"
+                                        android:text="股神在世"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="10sp"/>
+
+                                </RelativeLayout>
+
+                                <View
+                                    style="@style/SepLineHorizontal"
+                                    android:layout_marginLeft="16dp"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/section_exchange"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="39dp"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/label_exchange_brief"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="共盈利12,000 · 可变现12.00元"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="10sp"/>
+
+                                    <ImageView
+                                        android:id="@+id/img_icon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="6dp"
+                                        android:layout_toRightOf="@id/label_exchange_brief"
+                                        android:src="@mipmap/ic_arrow_right_dark"/>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <include
+                            android:id="@+id/header_list"
+                            layout="@layout/header_stock_match_detail"/>
+
+                    </android.support.design.widget.AppBarLayout>
+
+                </android.support.design.widget.CoordinatorLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/section_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/gmf_white"
+                android:orientation="vertical">
+
+                <View style="@style/BorderLineHorizontal"/>
+
+                <TextView
+                    android:id="@+id/label_bottom_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="我已报名 · 3天后开赛"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:id="@+id/section_bottom_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/label_bottom_brief"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="8dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layer_loading"/>
+
+        <include layout="@layout/layer_reload"/>
+
+        <include layout="@layout/layer_empty"/>
+
+    </FrameLayout>
+
+</LinearLayout>

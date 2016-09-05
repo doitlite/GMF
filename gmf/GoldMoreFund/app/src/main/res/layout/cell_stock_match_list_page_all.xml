@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sel_compete_card_bg"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:placeholderImage="@mipmap/ic_fund_cover_placeholder"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundTopLeft="true"
+                app:roundTopRight="true"
+                app:viewAspectRatio="2.5" />
+
+            <TextView
+                android:id="@+id/label_signUp"
+                android:layout_width="60dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:background="#FF3498DB"
+                android:gravity="center"
+                android:text="已报名"
+                android:textColor="@color/gmf_text_white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_match_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_sign_in"/>
+
+            <TextView
+                android:id="@+id/label_match_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="月月股神争霸(21期)"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/label_match_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_match_name"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="进行中 | 12天后比赛结束"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/label_match_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/label_match_name"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:text="￥2000"
+                android:textColor="@color/gmf_text_red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/label_match_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/label_match_state"
+                android:layout_marginRight="16dp"
+                android:text="冠军奖励"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_match_state" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

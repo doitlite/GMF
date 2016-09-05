@@ -1,0 +1,101 @@
+<resources>
+
+    <string name="gmf_app_bar_layout_behavior">com.goldmf.GMFund.widget.AppBarLayoutBehavior</string>
+    <string name="gmf_app_bar_layout_behavior_scroll">com.goldmf.GMFund.widget.AppBarLayoutBehavior2</string>
+    <string name="gmf_dynamic_height_view_behavior">com.goldmf.GMFund.widget.DynamicHeightViewBehavior</string>
+
+    <string name="gmf_btn_confirm">确定</string>
+    <string name="gmf_btn_cancel">取消</string>
+
+    <!-- start of act_main -->
+    <string name="act_main_tab_home">首页</string>
+    <string name="act_main_tab_invest">投资</string>
+    <string name="act_main_tab_trade">操盘</string>
+    <string name="act_main_tab_chat">消息</string>
+    <string name="act_main_tab_mine">我的</string>
+    <!-- end of act_main -->
+
+    <!-- start of frag_home -->
+    <string name="frag_home_title">主页</string>
+    <string name="cell_home_btn_join_raising">投资组合</string>
+    <string name="cell_home_btn_join_locked">运行中</string>
+    <string name="cell_home_label_remaining_time">剩余时间</string>
+    <string name="cell_home_label_join_count">参与人数</string>
+    <string name="cell_home_label_earning_rate">历史年化收益率</string>
+    <!-- end of frag_home -->
+
+    <!-- start of frag_capital -->
+    <string name="frag_capital_bind_account">+ 绑定股票账号</string>
+    <!-- end of frag_capital -->
+
+    <!-- start of frag_trade -->
+    <string name="frag_trade_title">操盘</string>
+    <!-- end of frag_trade -->
+
+    <!-- start of frag_me -->
+    <string name="frag_me_title">我的</string>
+    <!-- end of frag_me -->
+
+    <!-- start of frag_capital -->
+    <string name="frag_capital_title">资产</string>
+    <string name="cell_capital_account_bind">我绑定的股票账户</string>
+    <string name="cell_capital_change_today">今日盈亏</string>
+    <string name="format_cell_capital_state">创建 %1$s 跟投 %2$s</string>
+    <string name="format_cell_capital_last_gmf">现金账户 %1$s</string>
+    <string name="frag_portfolio_brief">操盘侠组合，是由操盘手发起、投资者众筹的股票收益类投资理财方式，不需要专业的股票知识，只需要按需要参与众筹，封闭期结束后享受投资收益</string>
+    <!-- end of frag_capital -->
+
+    <!-- start of act_setting -->
+    <string name="act_about_title">关于我们</string>
+    <!-- end of act_setting -->
+
+    <!-- start of act setting -->
+    <string name="act_setting_title">设置</string>
+    <!-- end of act setting -->
+
+    <!-- start of act_edit_profile -->
+    <string name="act_edit_profile_title_main">账户资料</string>
+    <string name="act_edit_profile_title_login_password">修改登录密码</string>
+    <string name="act_edit_profile_title_transaction_password">修改交易密码</string>
+    <string name="act_edit_profile_title_verify_name">实名认证</string>
+    <string name="act_edit_profile_title_hide_setting">隐私设置</string>
+    <string name="act_edit_profile_btn_save">保存</string>
+    <string name="act_edit_profile_btn_verify">认证</string>
+    <!-- end of act_edit_profile -->
+
+    <!-- start of act_login -->
+    <string name="act_login_title">操盘侠账号</string>
+    <string name="act_login_btn_login">登录</string>
+    <string name="act_login_hint_input_password">请输入您的密码</string>
+    <string name="act_login_btn_registration">注册</string>
+    <string name="act_login_hint_input_verify_code">验证码</string>
+    <string name="act_login_hint_input_name">请输入昵称</string>
+    <!-- end of act_login -->
+
+    <!-- start of act_notification_center -->
+    <string name="act_notification_center_title">通知中心</string>
+    <!-- end of act_notification_center -->
+
+    <!-- start of act_transaction -->
+    <string name="act_transaction_title">交易</string>
+    <!-- end of act_transaction -->
+
+    <!-- start of act_select_portfolio -->
+    <string name="act_select_portfolio_title">选择投资组合</string>
+    <string name="act_order_list_title">全部组合</string>
+    <string name="calendar_pad_title">筛选日期</string>
+    <string name="act_login_btn_open_wechat">打开微信</string>
+    <string name="act_login_search_keyword">微信中搜索 goldmfcom</string>
+    <string name="act_login_format_not_invited">%1$s 你的手机号还没有加入操盘侠计划，除了通过有权限的达人发放邀请之外，还可以关注微信公众号，会不定期发放哦</string>
+    <string name="act_login_format_code_sended">已发送验证码至 18575681670</string>
+    <string name="frag_verify_name_hint_name">真实姓名</string>
+    <string name="frag_verify_name_hint_id_card">身份证号</string>
+    <string name="frag_fund_detail_hint">操盘乐，是操盘侠平台推出的由合格操盘手发起、投资人跟投的安全便捷的投票收益类投资理财计划。通过操盘乐，投资人不需要专业的股票知识也可以参与股票投资、享受投资收益。</string>
+    <string name="act_trader_home_title">操盘手主页</string>
+    <string name="act_trader_more_funds_title">更多已结算组合(2)</string>
+    <string name="frag_trade_format_apply_label">%1$s：\n\n首先，感谢你申请成为操盘手。\n\n操盘乐是操盘侠平台推出的由合格操盘手发起、投资人投资的便捷的股票收益类投资理财计划。目前提供基本的股票交易系统，包含创建组合产品、股票批量买卖、自动结算等功能。\n\n操盘侠拥有专业的研报团队和技术支持，不仅能帮助你更高效稳定的进行股票交易，还希望能够建立操盘手与投资者之间亲密、平等、共赢的平台，这一切等待你我来共同创建。\n\n新的旅程已经开始。\n现在就开始点击下方按钮，创建你的第一个操盘乐组合吧。</string>
+    <string name="sina_guarantee_text">充值服务由新浪支付提供和托管</string>
+    <string name="insurance_guarantee_text">帐户资金安全由中国人民保险承保</string>
+    <!-- end of act_select_portfolio -->
+
+</resources>

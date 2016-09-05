@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sel_cell_bg_default">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_join"
+            style="@style/GMFRoundButton.Yellow"
+            android:layout_width="@dimen/gmf_button_width_small"
+            android:layout_height="@dimen/gmf_button_height_small"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="@string/cell_home_btn_join_raising"
+            android:textSize="@dimen/gmf_button_text_size_small"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/btn_join"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/section_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_title"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="无限滚雪球A组合"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/label_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="4dp"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:text="沪深"
+                    android:textColor="@color/gmf_text_red"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/section_title"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="小超人 2015.07.28 创建"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        style="@style/SepLineHorizontal"
+        android:layout_below="@id/header"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/label_complete_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/line1"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="8dp"
+        android:text="已完成: 23.5%"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_remaining_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/label_complete_percent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:text="剩余5天"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/HorizontalProgressBar.Yellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_complete_percent"
+        android:layout_alignRight="@id/label_remaining_day"
+        android:layout_below="@id/label_complete_percent"
+        android:layout_marginTop="6dp"
+        android:progress="60"/>
+
+    <RelativeLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/progress">
+
+        <TextView
+            android:id="@+id/label_raised_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="目标金额￥\n1,328,000"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/label_target_capital_or_invested_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="140dp"
+            android:text="已募集￥\n1,328,000"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/label_locked_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="272dp"
+            android:text="锁定期\n90天"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <View
+            style="@style/SepLineVertical"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="120dp"/>
+
+        <View
+            style="@style/SepLineVertical"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="256dp"/>
+
+    </RelativeLayout>
+
+    <View style="@style/SepLineHorizontal"/>
+
+    <View
+        style="@style/SepLineHorizontal"
+        android:layout_below="@id/contentPanel"/>
+
+</RelativeLayout>

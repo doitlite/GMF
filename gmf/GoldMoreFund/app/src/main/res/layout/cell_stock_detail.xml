@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/cell_stock_detail"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gmf_white">
+
+        <TextView
+            android:id="@+id/label_open_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="今开\n19.12"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+        <TextView
+            android:id="@+id/label_pre_close_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/label_open_price"
+            android:layout_toRightOf="@id/label_open_price"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="今收\n19.12"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+        <TextView
+            android:id="@+id/label_max_high"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/label_open_price"
+            android:layout_toRightOf="@id/label_pre_close_price"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="最高\n19.12"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+        <TextView
+            android:id="@+id/label_min_low"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/label_open_price"
+            android:layout_toRightOf="@id/label_max_high"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="最低\n19.12"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+        <TextView
+            android:id="@+id/label_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_open_price"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="成交量(股)\n238.29万"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+        <TextView
+            android:id="@+id/label_market_income_ratio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/label_volume"
+            android:layout_toRightOf="@id/label_volume"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="市盈率\n104.23"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+        <TextView
+            android:id="@+id/label_income_per"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/label_volume"
+            android:layout_toRightOf="@id/label_market_income_ratio"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="每股收益\n0.23"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+        <TextView
+            android:id="@+id/label_market_capital"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/label_volume"
+            android:layout_toRightOf="@id/label_income_per"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="总市值\n238.29亿"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            app:layout_widthPercent="25%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</merge>

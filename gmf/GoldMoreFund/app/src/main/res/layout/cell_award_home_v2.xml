@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/gmf_white">
+
+    <TextView
+        android:id="@+id/label_name_and_date"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:lines="2"
+        android:paddingLeft="16dp"
+        android:text="黄小丫\n2015.09.28"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/label_state"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="已提取"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="14sp"/>
+
+
+    <TextView
+        android:id="@+id/label_amount_and_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/label_state"
+        android:layout_toRightOf="@id/label_name_and_date"
+        android:lines="2"
+        android:text="80元\n投资10,000元"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

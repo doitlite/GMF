@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical"
+    tools:layout_marginTop="25dp">
+
+    <com.goldmf.GMFund.widget.BasicCell
+        android:id="@+id/cell_today_deal_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:lineTop="true"
+        app:lineBottom="true"
+        app:lineBottomHasMarginLeft="true"
+        app:title="当日成交" />
+
+    <com.goldmf.GMFund.widget.BasicCell
+        android:id="@+id/cell_today_order"
+        android:layout_width="match_parent"
+        app:lineTop="false"
+        app:lineBottom="true"
+        android:layout_height="wrap_content"
+        app:title="当日委托" />
+
+    <com.goldmf.GMFund.widget.BasicCell
+        android:id="@+id/cell_history_deal_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:lineTop="true"
+        app:lineBottom="true"
+        app:title="历史成交" />
+</LinearLayout>

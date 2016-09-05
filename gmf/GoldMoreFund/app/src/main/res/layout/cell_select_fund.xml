@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    tools:background="@color/gmf_white"
+    tools:layout_marginTop="50dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_cover"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        app:placeholderImage="@mipmap/ic_award_placeholder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp"
+            tools:text="飞龙01期" />
+
+        <Space
+            android:layout_width="0px"
+            android:layout_height="4dp" />
+
+        <TextView
+            android:id="@+id/label_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"
+            tools:text="102,826.00 元 · 3个月" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        tools:src="@mipmap/ic_tag_fund_bonus" />
+</RelativeLayout>

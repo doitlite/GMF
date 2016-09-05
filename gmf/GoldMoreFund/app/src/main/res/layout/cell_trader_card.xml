@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    tools:background="@color/gmf_white"
+    tools:layout_marginTop="25dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@id/img_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:placeholderImage="@mipmap/ic_trader_avatar_placeholder"
+        app:roundAsCircle="true" />
+
+    <LinearLayout
+        android:id="@+id/section_title"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/img_avatar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/label_name"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="16sp"
+            tools:text="趋势信徒" />
+
+        <TextView
+            android:id="@+id/label_fund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="运行中1 · 已结束3"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/label_desc"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/section_title"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/section_title"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="4"
+        tools:text="曾任某大型资产管理公司投资总监，管理2亿资产。强调风险控制，稳定持续性收益。" />
+
+</RelativeLayout>

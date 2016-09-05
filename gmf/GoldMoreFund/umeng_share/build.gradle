@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion "$BUILD_COMPILE_SDK_VERSION".toInteger()
+    buildToolsVersion "$BUILD_TOOLS_VERSION"
+
+    defaultConfig {
+        minSdkVersion "$BUILD_MIN_SDK_VERION".toInteger()
+        targetSdkVersion "$BUILD_TARGET_SDK_VERSION".toInteger()
+        versionCode 1
+        versionName "1.0"
+        consumerProguardFile 'proguard-rules.pro'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+}

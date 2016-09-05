@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gmf_white"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/label_question_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:src="@mipmap/ic_qa"/>
+
+    <TextView
+        android:id="@+id/label_question_content"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/label_question_tag"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@id/label_question_tag"
+        android:text="什么是操盘侠？"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/label_answer_content"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/label_question_content"
+        android:layout_alignRight="@id/label_question_content"
+        android:layout_below="@id/label_question_content"
+        android:layout_marginTop="16dp"
+        android:text="操盘侠是为广大投资者及专业操盘手提供的一个安全、便捷、高收益的在线理财平台，致力于为用户提供阳光透明的在线理财服务。核心产品是一系列由合格操盘手创建的股票权益类理财计划产品—操盘乐。"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="14sp"/>
+</RelativeLayout>

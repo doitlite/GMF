@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/wrapper_content"
+        android:layout_width="335dp"
+        android:layout_height="366dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_dialog_round"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/ic_day_sign_title" />
+
+        <TextView
+            android:id="@+id/label_score_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="20sp"
+            tools:text="获得100积分" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可以积分商城中使用"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/section_signing_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btn_signing"
+            style="@style/GMFRoundButton.Red"
+            android:layout_width="@dimen/gmf_button_width_large"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="完成"
+            android:textSize="@dimen/gmf_button_text_size_large" />
+
+    </LinearLayout>
+
+</FrameLayout>

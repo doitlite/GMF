@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/section_chart_left"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp">
+
+    <FrameLayout
+        android:id="@+id/section_left_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/label_left_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/label_left_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/label_left_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="10sp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/section_left_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/label_left_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:id="@+id/label_left_text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="10sp"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

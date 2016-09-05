@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_centerInParent="true"
+            android:text="反馈建议"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/field_content"
+        style="@style/GMFEditText"
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:layout_margin="16dp"
+        android:gravity="left|top"
+        android:hint="感谢反馈，请写下您的宝贵意见或建议"
+        android:imeOptions="actionDone"
+        android:padding="16dp"
+        android:textSize="13sp"/>
+
+    <com.goldmf.GMFund.widget.ProgressButton
+        android:id="@+id/btn_send"
+        android:layout_width="@dimen/gmf_button_width_large"
+        android:layout_height="@dimen/gmf_button_height_large"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:buttonTheme="yellow"
+        app:textSize="@dimen/gmf_button_text_size_large"
+        app:text_for_loading="正在发送..."
+        app:text_for_normal="发送"/>
+
+</LinearLayout>

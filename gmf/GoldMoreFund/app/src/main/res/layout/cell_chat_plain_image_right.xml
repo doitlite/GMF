@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:text="今天 14:02"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="12sp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            app:placeholderImage="@mipmap/ic_launcher"
+            app:roundAsCircle="true"/>
+
+        <FrameLayout
+            android:id="@+id/cover_wrapper"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/ic_chat_bg_right"
+            android:layout_toLeftOf="@id/img_avatar">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@id/img_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:placeholderImage="@mipmap/ic_fund_cover_placeholder"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundedCornerRadius="2dp"/>
+
+            <com.goldmf.GMFund.widget.UploadLayer
+                android:id="@+id/layer_upload"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/label_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="87%"
+                android:textColor="@color/gmf_text_white"
+                android:textSize="14sp"/>
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/img_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/cover_wrapper"
+            android:src="@mipmap/ic_send_fail_text"/>
+
+    </RelativeLayout>
+</LinearLayout>

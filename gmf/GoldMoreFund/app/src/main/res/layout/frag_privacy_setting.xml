@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="@string/act_edit_profile_title_hide_setting"/>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.goldmf.GMFund.widget.ToggleCell
+                android:id="@+id/cell_simulate_performance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:lineBottom="true"
+                app:lineTop="true"
+                app:title="是否公开模拟业绩"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="关闭后，其他用户将无法在你的个人主页中看到你的模拟业绩，关注你后也无法收到你的模拟买卖提醒。"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

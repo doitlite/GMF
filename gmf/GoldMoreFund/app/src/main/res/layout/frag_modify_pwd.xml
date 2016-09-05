@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="修改密码"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            style="@style/BorderLineHorizontal"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gmf_white"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/field_pwd_old"
+                style="@style/GMFEditText"
+                android:hint="输入当前密码"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:nextFocusDown="@+id/field_pwd_new"/>
+        </LinearLayout>
+
+        <View style="@style/BorderLineHorizontal"/>
+
+        <View
+            style="@style/BorderLineHorizontal"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gmf_white"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/field_pwd_new"
+                style="@style/GMFEditText"
+                android:hint="输入新密码"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:nextFocusDown="@+id/field_pwd_confirm"/>
+        </LinearLayout>
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_marginLeft="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gmf_white">
+
+            <EditText
+                android:id="@+id/field_pwd_confirm"
+                style="@style/GMFEditText"
+                android:hint="再次输入新密码"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+
+        <View style="@style/BorderLineHorizontal"/>
+
+        <com.goldmf.GMFund.widget.ProgressButton
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/gmf_button_width_large"
+            android:layout_height="@dimen/gmf_button_height_large"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            app:buttonTheme="yellow"
+            app:text_for_normal="@string/act_edit_profile_btn_save"
+            app:text_for_loading="正在保存中..."
+            app:textSize="@dimen/gmf_button_text_size_large"/>
+
+        <Button
+            android:id="@+id/btn_reset"
+            style="@style/GMFPlainButton.Blue"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="忘记密码"/>
+
+    </LinearLayout>
+
+</LinearLayout>

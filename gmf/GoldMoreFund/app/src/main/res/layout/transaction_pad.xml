@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gmf_list_cell_height"
+        android:background="#F2F2F2">
+
+        <TextView
+            android:id="@+id/label_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="切换键盘"
+            android:textColor="@color/gmf_text_black" />
+
+        <FrameLayout
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/gmf_list_cell_height"
+            android:layout_height="@dimen/gmf_list_cell_height"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_close_keyboard" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="176dp">
+
+        <RelativeLayout
+            android:id="@+id/section_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true">
+
+            <Button
+                android:id="@+id/btn_purchase"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sel_transaction_btn_bg"
+                android:text="买入"
+                android:textColor="@color/sel_transaction_button_text" />
+
+            <Button
+                android:id="@+id/btn_sell"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/btn_purchase"
+                android:background="@drawable/sel_transaction_btn_bg"
+                android:text="卖出"
+                android:textColor="@color/sel_transaction_button_text" />
+
+            <com.goldmf.GMFund.widget.keyboard.CustomKeyboardView
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_purchase"
+                android:background="#f2f2f2"
+                android:keyBackground="@drawable/sel_key_bg_default"
+                app:anotherKeyBackground="@drawable/sel_key_bg_special"
+                app:keyBackground="@drawable/sel_key_bg_default"
+                app:keyTextSize="14sp"
+                app:labelTextSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/section_percent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gmf_white"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="当前"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/label_current_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/text1"
+                    android:layout_below="@id/text1"
+                    android:layout_marginTop="8dp"
+                    android:minWidth="28dp"
+                    android:text="9.27%"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/text1"
+                    android:layout_marginLeft="32dp"
+                    android:layout_toRightOf="@id/label_current_percent"
+                    android:text="调整"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/label_delta_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/label_current_percent"
+                    android:layout_alignLeft="@id/text2"
+                    android:text="+15.06%"
+                    android:textColor="@color/gmf_text_red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/label_expect_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="25.00%"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="30sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:clipChildren="false"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/label_min_percent"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="0%"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/label_max_percent"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="32.88%"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12dp" />
+
+                <com.goldmf.GMFund.widget.TransactionSeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="0px"
+                    android:layout_height="64dp"
+                    android:layout_toLeftOf="@id/label_max_percent"
+                    android:layout_toRightOf="@id/label_min_percent" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

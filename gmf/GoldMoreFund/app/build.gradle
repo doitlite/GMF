@@ -1,0 +1,173 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+
+Properties properties = new Properties();
+properties.load(project.rootProject.file("local.properties").newDataInputStream());
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+//        ignoreWarnings true
+//        quiet true
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            keyAlias properties.getProperty('realese_store_keyAlias')
+            keyPassword properties.getProperty('release_store_keyPassword')
+            storeFile project.rootProject.file("release.keystore")
+            storePassword properties.getProperty('release_store_storePassword')
+        }
+    }
+
+
+    compileSdkVersion "$BUILD_COMPILE_SDK_VERSION".toInteger()
+    buildToolsVersion "$BUILD_TOOLS_VERSION"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.goldmf"
+        minSdkVersion "$BUILD_MIN_SDK_VERION".toInteger()
+        targetSdkVersion "$BUILD_TARGET_SDK_VERSION".toInteger()
+        versionCode 133
+        versionName "2.6.0"
+        manifestPlaceholders = [gmf_channel_id: "official"]
+        multiDexEnabled true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            applicationIdSuffix ".GMFund"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        pro {
+            initWith(android.buildTypes.release)
+            applicationIdSuffix ".GMFundPro"
+        }
+        debug {
+            applicationIdSuffix ".GMFund"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+            minifyEnabled false
+        }
+    }
+
+    buildTypes.each { buildType ->
+        String name = buildType.name;
+        if (name.equalsIgnoreCase("pro")) {
+            buildType.manifestPlaceholders = [gmf_application_id: 'com.goldmf.GMFundPro', gmf_jpush_appkey: 'f03b1f169613787039e0bcfc']
+        } else {
+            buildType.manifestPlaceholders = [gmf_application_id: 'com.goldmf.GMFund', gmf_jpush_appkey: '36a371aff1bb8c6a2bee3b3a']
+        }
+    }
+
+    productFlavors {
+        official {
+        }
+//        qihoo_360 {
+//        }
+//        wandoujia {
+//        }
+//        yingyongbao {
+//        }
+//        baidu {
+//        }
+//        play {
+//        }
+//        gfan {
+//        }
+//        xiaomi {
+//        }
+//        huawei {
+//        }
+//        meizu {
+//        }
+//        oppo {
+//        }
+//        vivo {
+//        }
+//        lenovo {
+//        }
+    }
+
+    productFlavors.findAll().each { flavor ->
+        flavor.manifestPlaceholders = [gmf_channel_id: flavor.name.toString()];
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.all { item ->
+        item.outputs.each { variant ->
+            File file = variant.outputFile;
+            if (file.getName().endsWith("release.apk")) {
+                variant.outputFile = new File(file.parent, "cpman" + "-v" + defaultConfig.versionName + "." + defaultConfig.versionCode + "-" + variant.name.replaceAll("Release", "") + ".apk");
+            } else if (file.getName().endsWith("pro.apk")) {
+                variant.outputFile = new File(file.parent, "cpman-pro" + "-v" + defaultConfig.versionName + "." + defaultConfig.versionCode + "-" + variant.name.replaceAll("Pro", "") + ".apk");
+            }
+        }
+    }
+
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "me.tatarka:gradle-retrolambda:$RETROLAMBDA_VERSION"
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    maven { url "https://dl.bintray.com/yalezheng/maven/" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':umeng_share')
+    compile project(':ui-components-kit')
+    compile "com.android.support:multidex:$MULTIDEX_VERSION"
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:recyclerview-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:percent:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:design:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:cardview-v7:$ANDROID_SUPPORT_VERSION"
+    compile "com.android.support:palette-v7:$ANDROID_SUPPORT_VERSION"
+    compile "io.reactivex:rxandroid:$RXANDROID_VERSION"
+    compile "com.google.code.gson:gson:$GSON_VERSION"
+    compile "com.facebook.fresco:fresco:$FRESCO_VERSION"
+    compile "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION"
+    compile "com.github.orhanobut:logger:$LOGGER_VERSION"
+    compile "com.qiniu:qiniu-android-sdk:$QINIU_VERSION"
+    compile "io.paperdb:paperdb:$PAPERDB_VERSION"
+    compile "com.soundcloud.android:android-crop:$ANDROID_CROP_VERSION"
+    compile "com.annimon:stream:$STREAM_VERSION"
+    compile "io.yale.infinitychartview:lib:$INFINITY_CHART_VIEW_VERSION"
+    compile "se.emilsjolander:stickylistheaders:$STICKY_LIST_HEADERS_VERSION"
+    compile "net.qiujuer.genius:blur:$BLUR_VERSION"
+    compile "com.github.franmontiel:PersistentCookieJar:$PERSISTENT_COOKIE_JAR_VERSION"
+    compile "com.google.zxing:core:$ZXING_VERSION"
+    compile "com.google.zxing:android-core:$ZXING_VERSION"
+//    debugCompile "com.squareup.leakcanary:leakcanary-android:$LEAKCANARY_VERSION"
+    debugCompile "com.squareup.leakcanary:leakcanary-android-no-op:$LEAKCANARY_VERSION"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$LEAKCANARY_VERSION"
+    proCompile "com.squareup.leakcanary:leakcanary-android-no-op:$LEAKCANARY_VERSION"
+}
+
+task launchOfficialPro(type: Exec, dependsOn: 'installOfficialPro') {
+    commandLine 'adb', 'shell', 'am', 'start', '-n', 'com.goldmf.GMFundPro/com.goldmf.GMFund.controller.SplashActivity'
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gmf_list_cell_height"
+        android:background="@color/gmf_keyboard_header_bg">
+
+        <FrameLayout
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/gmf_list_cell_height"
+            android:layout_height="@dimen/gmf_list_cell_height"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_close_keyboard" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/label_one_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="一周内"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/label_two_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/label_one_week"
+            android:text="两周内"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.goldmf.GMFund.widget.StringFlow
+        android:id="@+id/flow_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gmf_white"
+        app:visibleElementCount="5" />
+
+</LinearLayout>

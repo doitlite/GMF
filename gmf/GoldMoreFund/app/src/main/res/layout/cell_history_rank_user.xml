@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/gmf_white"
+                android:orientation="vertical">
+
+    <View
+        style="@style/SepLineHorizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="26dp">
+
+        <TextView
+            android:id="@+id/label_rank"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="20sp"
+            tools:background="@mipmap/bg_rank_gold"
+            tools:text="1"
+            tools:textColor="@color/gmf_text_gold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44dp"
+            android:layout_toRightOf="@id/label_rank">
+
+            <TextView
+                android:id="@+id/label_match_income_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="收益率：20% "
+                android:textColor="@color/gmf_text_red"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/label_match_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/label_match_income_ratio"
+                android:layout_below="@id/label_match_income_ratio"
+                android:layout_marginTop="4dp"
+                android:text="参赛日期：2016.01.01-02.04"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/label_match_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/label_match_time"
+                android:layout_below="@id/label_match_time"
+                android:layout_marginTop="4dp"
+                android:text="参赛名称：短线之王(01期)   100人 "
+                android:textColor="@color/gmf_text_black"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

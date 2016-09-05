@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="extraTitle" format="string" />
+    <attr name="hideIcon" format="boolean" />
+    <attr name="hideArrow" format="boolean" />
+    <attr name="lineTop" format="boolean" />
+    <attr name="lineBottom" format="boolean" />
+    <attr name="lineBottomHasMarginLeft" format="boolean" />
+    <attr name="lineBottomHasMarginRight" format="boolean" />
+    <attr name="hintText" format="string" />
+    <attr name="extraHintText" format="string" />
+    <attr name="titleDrawableRight" format="reference" />
+    <attr name="extraTitleDrawableRight" format="reference" />
+    <attr name="text" format="string" />
+
+    <declare-styleable name="BasicCell">
+        <attr name="title" />
+        <attr name="titleColor" format="color" />
+        <attr name="extraTitle" />
+        <attr name="extraTitleColor" format="color" />
+        <attr name="titleDrawableRight" />
+        <attr name="extraTitleDrawableRight" />
+        <attr name="icon" />
+        <attr name="lineTop" />
+        <attr name="lineBottom" />
+        <attr name="lineBottomHasMarginLeft" />
+        <attr name="lineBottomHasMarginRight" />
+        <attr name="hideIcon" />
+        <attr name="hideArrow" />
+    </declare-styleable>
+
+    <declare-styleable name="InputCell">
+        <attr name="title" />
+        <attr name="lineTop" />
+        <attr name="lineBottom" />
+        <attr name="lineBottomHasMarginLeft" />
+        <attr name="text" />
+        <attr name="hintText" />
+        <attr name="extraHintText" />
+    </declare-styleable>
+    <declare-styleable name="EditableCell">
+        <attr name="title" />
+        <attr name="lineTop" />
+        <attr name="lineBottom" />
+        <attr name="lineBottomHasMarginLeft" />
+        <attr name="text" />
+        <attr name="hintText" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ToggleCell">
+        <attr name="title" />
+        <attr name="lineTop" />
+        <attr name="lineBottom" />
+        <attr name="lineBottomHasMarginLeft" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SectionHeader">
+        <attr name="title" />
+        <attr name="extraTitle" />
+        <attr name="hideArrow" />
+        <attr name="indicatorColor" format="color" />
+        <attr name="hideTopLine" format="boolean"/>
+        <attr name="hideBottomLine" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomKeyboardView">
+        <attr name="keyBackground" format="reference" />
+        <attr name="anotherKeyBackground" format="reference" />
+        <attr name="keyTextSize" format="dimension" />
+        <attr name="keyTextColor" format="color" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TransactionSeekBar">
+        <attr name="lineWidth" format="dimension" />
+        <attr name="fontSize" format="dimension" />
+        <attr name="anchorHeight" format="dimension" />
+        <attr name="textTopMargin" format="dimension" />
+        <attr name="circleRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomPasswordField">
+        <attr name="numViewSize" format="dimension" />
+        <attr name="maxNumCount" format="integer" />
+        <attr name="dotRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CalendarView">
+        <attr name="textSize" format="dimension" />
+        <attr name="dateBackground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="EditTextWrapper">
+        <attr name="lineTop" />
+        <attr name="lineBottom" />
+        <attr name="lineBottomHasMarginLeft" />
+    </declare-styleable>
+
+    <declare-styleable name="StringFlow">
+        <attr name="visibleElementCount" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressButton">
+        <attr name="textSize" />
+        <attr name="text_for_normal" format="string" />
+        <attr name="text_for_loading" format="string" />
+        <attr name="text_for_failure" format="string" />
+        <attr name="buttonTheme">
+            <enum name="black" value="0" />
+            <enum name="blue" value="1" />
+            <enum name="yellow" value="2" />
+            <enum name="red" value="3" />
+            <enum name="orange" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="GMFProgressBar">
+        <attr name="gmf_pb_theme">
+            <enum name="dark" value="0" />
+            <enum name="light" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="GMFCircleProgressBar">
+        <attr name="gmf_cpb_progress" format="float" />
+        <attr name="gmf_cpb_border_color" format="color" />
+        <attr name="gmf_cpb_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="QACell">
+        <attr name="question" format="string" />
+        <attr name="answer" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="FundAccountCell">
+        <attr name="accountType">
+            <enum name="cn" value="0" />
+            <enum name="hk" value="1" />
+            <enum name="simulate" value="2" />
+        </attr>
+        <attr name="accountState">
+            <enum name="not_invest" value="0" />
+            <enum name="invested" value="1" />
+        </attr>
+        <attr name="cellStyle">
+            <enum name="hasButton" value="0" />
+            <enum name="noButton" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BindCNCardInfoCell">
+        <attr name="action_type">
+            <enum name="withdraw_from_bank" value="0" />
+            <enum name="withdraw_from_sina" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MainTabView">
+        <attr name="title" />
+        <attr name="gmf_icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BuySellStockIndicator">
+        <attr name="gmf_state">
+            <enum name="buy" value="0" />/
+            <enum name="sell" value="1" />/
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FiveOrderCell">
+        <attr name="title" />
+    </declare-styleable>
+
+    <declare-styleable name="LoopPlayTextsView">
+        <attr name="textSize" />
+        <attr name="textColor" />
+        <attr name="childMargin" format="dimension" />
+        <attr name="scrollIntervalInMills" format="integer" />
+        <attr name="scrollStepInPx" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="EmptyLayer">
+        <attr name="title" />
+        <attr name="subtitle" />
+    </declare-styleable>
+</resources>

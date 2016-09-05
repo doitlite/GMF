@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@color/gmf_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="97"
+        android:paddingLeft="10dp"
+        android:text="罗牛山\n586.23"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="89"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:text="4,950\n2,340"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="89"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:text="12.23\n13.56"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_weight="97"
+        android:gravity="right"
+        android:paddingRight="10dp"
+        android:text="+2345.23\n+12.72%"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="14sp"/>
+
+</LinearLayout>

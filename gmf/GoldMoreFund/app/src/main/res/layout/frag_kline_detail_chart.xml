@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_white">
+
+    <FrameLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gmf_white">
+
+        <FrameLayout
+            android:id="@+id/section_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="40dp">
+
+            <io.yale.infinitychartview.lib.InfinityChartView
+                android:id="@+id/chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.goldmf.GMFund.widget.DrawFetchMoreView
+                    android:id="@id/chart_left_loading_view"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"/>
+
+                <io.yale.infinitychartview.lib.ChartViewContainer
+                    android:id="@id/chart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </io.yale.infinitychartview.lib.InfinityChartView>
+
+            <LinearLayout
+                android:id="@+id/section_label_detail_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/label_upper_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textSize="8sp"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/label_bottom_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="8sp"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/section_label_detail_press"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/label_upper_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textSize="8sp"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/label_bottom_chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:textSize="8sp"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                style="@style/SepLineVertical"/>
+
+            <View
+                style="@style/SepLineVertical"
+                android:layout_gravity="right"/>
+
+            <com.goldmf.GMFund.widget.DrawLineView
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:visibility="gone"/>
+
+            <View
+                style="@style/SepLineHorizontal"
+                android:layout_gravity="top"/>
+
+            <View
+                style="@style/SepLineHorizontal"
+                android:layout_gravity="bottom"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/section_type"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp">
+
+            <FrameLayout
+                android:id="@+id/section_left_top"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="right"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/label_max_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/label_mid_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/label_min_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="10sp"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/section_left_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:id="@+id/section_spec"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/label_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/section_macd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/label_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_mid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:id="@+id/label_bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/section_kdj"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="4dp"
+                        android:text="80"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:text="50"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginBottom="5dp"
+                        android:text="20"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="10sp"/>
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <include layout="@layout/layer_loading"/>
+
+    <include layout="@layout/frag_chart_reload"/>
+
+</FrameLayout>

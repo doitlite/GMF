@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="会话列表页"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/btn_send_to_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/sel_plain_button_bg_light"
+                android:minHeight="@dimen/toolbarBtnSize"
+                android:minWidth="@dimen/toolbarBtnSize">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="群发消息"
+                    android:textColor="@color/gmf_text_yellow"
+                    android:textSize="14sp"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="64dp"/>
+
+    <FrameLayout
+        android:id="@+id/section_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp">
+
+        <ImageButton
+            android:id="@+id/btn_camera"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/ic_chat_camera"/>
+
+        <Button
+            android:id="@+id/btn_send"
+            style="@style/GMFPlainButton.Black_Dark"
+            android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="6dp"
+            android:text="发送"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id="@+id/field_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="64dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_chat_input_bg"
+            android:maxLines="4"
+            android:minHeight="36dp"
+            android:padding="4dp"/>
+
+        <View style="@style/BorderLineHorizontal"/>
+    </FrameLayout>
+</LinearLayout>

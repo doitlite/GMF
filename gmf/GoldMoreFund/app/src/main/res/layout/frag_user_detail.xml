@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/root"
+                                                 xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@color/gmf_act_bg">
+
+    <FrameLayout
+        android:id="@+id/section_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_headerBG"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="centerCrop"/>
+
+        <View
+            android:id="@+id/img_header_cover"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"/>
+
+    </FrameLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@null"
+        app:elevation="0px">
+
+        <RelativeLayout
+            android:id="@+id/header_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll">
+
+            <FrameLayout
+                android:id="@+id/section_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:placeholderImage="@mipmap/ic_avatar_placeholder"
+                    app:placeholderImageScaleType="fitCenter"
+                    app:roundAsCircle="true"/>
+
+                <ImageView
+                    android:id="@+id/img_avatar_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"/>
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line"
+                style="@style/SepLineVertical"
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_below="@id/section_img"
+                android:layout_centerHorizontal="true"
+                android:background="@color/gmf_text_light_grey"/>
+
+            <TextView
+                android:id="@+id/label_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/section_img"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="-4dp"
+                android:layout_toLeftOf="@id/line"
+                android:gravity="center"
+                android:text="关注 324 "
+                android:textColor="@color/gmf_text_light_grey"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/label_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/section_img"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="-4dp"
+                android:layout_toRightOf="@id/line"
+                android:gravity="center"
+                android:text=" 粉丝 8752"
+                android:textColor="@color/gmf_text_light_grey"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/label_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="小金号 12345"
+                android:textColor="@color/gmf_text_light_grey"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/gmf_white"
+            app:layout_scrollFlags=""
+            app:tabIndicatorColor="@color/gmf_black"
+            app:tabMode="scrollable"
+            app:tabTextColor="@color/gmf_text_black"/>
+
+        <View style="@style/SepLineHorizontal"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/section_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+        <android.support.v7.widget.Toolbar
+            style="@style/CustomizeToolbar"
+            android:background="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/CustomizeToolbarTitle"
+                    android:layout_width="0dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="1"
+                    tools:text="小超人"/>
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    style="@style/CustomizeTabTextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@null"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="编辑资料"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/btn_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_round_stroke_button_white_normal"
+                    android:drawableLeft="@mipmap/ic_attention_white"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="已关注"
+                    android:textColor="@color/gmf_text_white"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <com.yale.ui.support.AdvanceSwipeRefreshLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="81dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/section_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg"
+        android:visibility="gone"
+        tools:layout_marginTop="80dp">
+
+        <com.goldmf.GMFund.widget.EmbedProgressView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/section_reload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg"
+        android:visibility="gone"
+        tools:layout_marginTop="80dp"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_network_error"/>
+
+            <TextView
+                android:id="@+id/label_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="网络好像出了点问题"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

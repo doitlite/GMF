@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/section_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/gmf_act_bg"
+    tools:layout_marginTop="25dp">
+
+    <include layout="@layout/cell_circle_list" />
+
+    <LinearLayout
+        android:id="@+id/section_reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gmf_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="打赏榜"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <LinearLayout
+            android:id="@+id/gallery_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:paddingTop="6dp" />
+
+        <TextView
+            android:id="@+id/span_empty"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center"
+            android:text="还没有人打赏，快来支持楼主"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gmf_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="评论"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/span_empty"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center"
+            android:text="沙发还在，来说说你的看法"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

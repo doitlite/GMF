@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_act_bg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_yellow">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp">
+
+            <EditText
+                android:id="@+id/field_search"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_search_edit_text_round"
+                android:drawableLeft="@mipmap/ic_search_black"
+                android:drawablePadding="6dp"
+                android:hint="股票代码、拼音、首字母"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:textColor="@color/gmf_text_black"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/img_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_clean_text"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@android:id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gmf_white"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/label_clean_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="清空搜索历史"
+                    android:textColor="@color/gmf_text_blue"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+
+    </FrameLayout>
+
+    <com.goldmf.GMFund.widget.InputAccessoryView
+        android:id="@+id/accessoryView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

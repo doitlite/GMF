@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sel_cell_bg_default">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="64dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/section_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/label_title"
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="无限滚雪球A组合"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/label_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:gravity="center"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="2dp"
+                            android:text="沪深"
+                            android:textColor="@color/gmf_text_red"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/label_running_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/section_title"
+                        android:layout_marginTop="6dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="封闭运行中，已运行3天，剩余177天"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/contentPanel"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@id/header"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/label_raised_money_or_invested_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="left"
+                    android:text="我投资了\n1000.00元"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/label_income_ratio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="收益率\n1.00%"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/label_expect_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:text="预计收益\n0.00元"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/traderProfitPanel"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:layout_below="@id/contentPanel"
+                android:background="@color/gmf_act_bg"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/label_fund_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="left"
+                    android:text="组合总投资\n100.00万元"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/label_withdraw_profit_shared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="已提取分成\n1.0000"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/label_expect_or_final_profit_shared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:text="预计总分成\n0.00元"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:id="@+id/img_fund_type"
+        android:layout_width="48dp"
+        android:layout_height="28dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/right_margin_of_fund_card_cell"
+        android:layout_marginTop="20dp"
+        android:elevation="2dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_fund_type_bonus"/>
+
+</FrameLayout>

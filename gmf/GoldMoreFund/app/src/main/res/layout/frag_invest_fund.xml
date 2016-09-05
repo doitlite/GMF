@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/root"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:layout_centerInParent="true"
+            android:text="投资组合"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/label_fund_name_and_other_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/gmf_white"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:text="6个月 · 剩余可投 10000元"
+                    android:textColor="@color/gmf_text_black"
+                    android:textSize="18sp"/>
+
+                <View style="@style/BorderLineHorizontal"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/section_invest_flexible"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/gmf_list_cell_height"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/shape_edit_text_round"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/field_amount_flexible"
+                            style="@style/GMFEditText"
+                            android:background="@android:color/transparent"
+                            android:ellipsize="end"
+                            android:hint="投资金额（最低10000元）"
+                            android:inputType="phone"
+                            android:singleLine="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/section_invest_fix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/label_amount_fix"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="24dp"
+                            android:text="￥1,000.00"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="32sp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <com.goldmf.GMFund.widget.BasicCell
+                    android:id="@+id/cell_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="16dp"
+                    app:title="2个可用投资红包"/>
+
+                <Button
+                    android:id="@+id/btn_invest"
+                    style="@style/GMFRoundButton.Yellow"
+                    android:layout_width="@dimen/gmf_button_width_large"
+                    android:layout_height="@dimen/gmf_button_height_large"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="投资"
+                    android:textSize="@dimen/gmf_button_text_size_large"/>
+
+                <TextView
+                    android:id="@+id/label_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="账户余额：0元"
+                    android:textColor="@color/gmf_text_grey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    style="@style/InsuranceGuaranteeLabel"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="投资代表同意\n《分红乐—牛人牛股系列股票收益类投资组合协议》"
+                android:textColor="@color/gmf_text_grey"
+                android:textSize="12sp"/>
+
+        </FrameLayout>
+
+        <include layout="@layout/layer_loading"/>
+
+        <include layout="@layout/layer_reload"/>
+
+    </FrameLayout>
+
+</LinearLayout>

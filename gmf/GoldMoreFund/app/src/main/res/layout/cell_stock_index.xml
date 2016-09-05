@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:orientation="vertical"
+                tools:background="@color/gmf_white">
+
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="上证指数"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/label_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="2895.33"
+        android:textColor="@color/gmf_text_red"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/label_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:text="-188.73 -6.42%"
+        android:textColor="@color/gmf_text_grey"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

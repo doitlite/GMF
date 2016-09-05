@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar"
+        android:background="@color/gmf_red">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="人民币佣金"/>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gmf_white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/tab_0"
+                        style="@style/CustomizeTabTextButtonContainer"
+                        android:background="@drawable/sel_award_tab">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="可提取奖励"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="14sp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/tab_1"
+                        style="@style/CustomizeTabTextButtonContainer"
+                        android:background="@drawable/sel_award_tab">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="未确认奖励"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="14sp"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/tab_2"
+                        style="@style/CustomizeTabTextButtonContainer"
+                        android:background="@drawable/sel_award_tab">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="已提现奖励"
+                            android:textColor="@color/gmf_text_black"
+                            android:textSize="14sp"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/refreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="34dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:text="时间"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="12sp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="110dp"
+                                        android:text="好友"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="12sp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="180dp"
+                                        android:text="操作"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="12sp"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="12dp"
+                                        android:text="佣金"
+                                        android:textColor="@color/gmf_text_grey"
+                                        android:textSize="12sp"/>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/list"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"/>
+                            </LinearLayout>
+                        </ScrollView>
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <include layout="@layout/layer_empty"/>
+
+                </FrameLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/section_left_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/gmf_white">
+
+                    <View style="@style/BorderLineHorizontal"/>
+
+                    <TextView
+                        android:id="@+id/label_total_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:text="当前可提取余额 ¥ 210"
+                        android:textColor="@color/gmf_text_grey"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_withdraw"
+                        style="@style/GMFRoundButton.Yellow"
+                        android:layout_width="@dimen/gmf_button_width_large"
+                        android:layout_height="40dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="提取余额"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/layer_reload"/>
+
+        <include layout="@layout/layer_loading"/>
+
+    </FrameLayout>
+</LinearLayout>

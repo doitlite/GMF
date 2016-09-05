@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="5dp"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/label_text_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="48sp"
+            android:typeface="sans"
+            android:text="13"
+            android:textColor="@color/gmf_text_light_grey"/>
+
+        <TextView
+            android:id="@+id/label_text_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/label_text_day"
+            android:layout_alignTop="@id/label_text_day"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:textSize="20sp"
+            android:text="星期五"
+            android:textColor="@color/gmf_text_light_grey"/>
+
+        <TextView
+            android:id="@+id/label_text_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignLeft="@id/label_text_week"
+            android:layout_alignBottom = "@id/label_text_day"
+            android:layout_marginBottom="10sp"
+            android:textSize="12sp"
+            android:text="2016年 4月"
+            android:textColor="@color/gmf_text_light_grey"/>
+
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/label_text_infos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@id/layout_top"
+        android:layout_marginTop="40sp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="14px的文案很长很长很长很长很长\n最多三行\n红色区域居中对齐"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/gmf_text_black"/>
+
+
+</RelativeLayout>

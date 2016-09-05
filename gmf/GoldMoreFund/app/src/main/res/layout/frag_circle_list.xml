@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_marginTop="25dp"
+    tools:paddingBottom="48dp">
+
+    <android.support.v7.widget.Toolbar style="@style/CustomizeToolbar">
+
+        <TextView style="@style/CustomizeToolbarTitle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/btn_notification"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/img_notification"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    tools:src="@mipmap/ic_circle_notification" />
+
+                <TextView
+                    android:id="@+id/label_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/gmf_white"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gmf_act_bg">
+
+        <LinearLayout
+            android:id="@+id/section_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@color/gmf_status_bar_black"
+                app:tabIndicatorColor="@color/gmf_white"
+                app:tabSelectedTextColor="@color/gmf_text_white"
+                app:tabTextColor="@color/gmf_text_light_grey" />
+
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.yale.ui.support.AdvanceSwipeRefreshLayout
+                    android:id="@+id/refreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </com.yale.ui.support.AdvanceSwipeRefreshLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:src="@mipmap/ic_circle_new"
+                    app:backgroundTint="#FFDE00"
+                    app:layout_anchor="@id/refreshLayout"
+                    app:layout_anchorGravity="center_horizontal|bottom" />
+
+            </android.support.design.widget.CoordinatorLayout>
+
+
+        </LinearLayout>
+
+        <include layout="@layout/layer_loading" />
+
+        <include layout="@layout/layer_reload" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gmf_act_bg">
+
+
+    <ImageView
+        android:id="@+id/img_insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/gmf_white"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_upload_photo"/>
+
+    <ImageView
+        android:id="@+id/img_delete_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_delete_photo"
+        android:visibility="visible"/>
+
+
+    <EditText
+        android:id="@+id/label_insert_content"
+        style="@style/GMFEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_insert"
+        android:layout_marginTop="10dp"
+        android:gravity="left|top"
+        android:hint="请输入内容"
+        android:minHeight="240dp"
+        android:paddingBottom="13dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="13dp"
+        android:singleLine="false"/>
+
+
+</RelativeLayout>

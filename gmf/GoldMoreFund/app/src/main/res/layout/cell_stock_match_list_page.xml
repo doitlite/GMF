@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gmf_white"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+
+    <TextView
+        android:id="@+id/label_match_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_cover"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:lineSpacingExtra="5dp"
+        android:text="月月股神争霸(21期)\n5月9日~5月13日 · 1000元现金奖"
+        android:textColor="@color/gmf_text_black"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/label_match_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/label_match_name"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:lineSpacingExtra="4dp"
+        android:text="21\n我的排名"
+        android:textColor="@color/gmf_text_red"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_signing"
+        style="@style/GMFRoundButton.Yellow"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:text="报名"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/img_match_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_sign_in"/>
+
+    <View
+        style="@style/SepLineHorizontal"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+
+
+

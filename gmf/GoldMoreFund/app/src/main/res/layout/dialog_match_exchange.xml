@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/rootView"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/gmf_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:src="@drawable/ic_close_dark"/>
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="盈利变现"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="18sp"/>
+
+        <View
+            style="@style/SepLineHorizontal"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/label_formula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:text="可变现 = (期末资产-期初资产) * 0.1%"
+            android:textColor="@color/gmf_text_black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_formula"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:text="变现金额将在比赛结束后自动存入沪深账户余额"
+            android:textColor="#80000000"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_formula"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="61dp"
+            android:text="期初资产"
+            android:textColor="#80000000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_formula"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="99dp"
+            android:text="期末资产"
+            android:textColor="#80000000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_formula"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="137dp"
+            android:text="盈利"
+            android:textColor="#80000000"
+            android:textSize="16sp"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_formula"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="175dp"
+            android:text="可变现"
+            android:textColor="#80000000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/label_begin_capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/label_formula"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="61dp"
+            android:text="50,000"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/label_end_capital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/label_formula"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="99dp"
+            android:text="62,000"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/label_income_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/label_formula"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="137dp"
+            android:text="12,000"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/label_exchange_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/label_formula"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="175dp"
+            android:text="12.00元"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+</LinearLayout>

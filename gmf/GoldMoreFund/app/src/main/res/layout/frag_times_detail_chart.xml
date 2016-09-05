@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gmf_white">
+
+    <LinearLayout
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/section_chart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+
+                <io.yale.infinitychartview.lib.ChartViewContainer
+                    android:id="@id/chart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <FrameLayout
+                    android:id="@+id/point_container"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+                <com.goldmf.GMFund.widget.DrawLineView
+                    android:id="@+id/line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <include
+                layout="@layout/cell_chart_left"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"/>
+
+            <include
+                layout="@layout/cell_chart_right"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"/>
+
+            <View
+                style="@style/SepLineVertical"
+                android:layout_marginLeft="40dp"/>
+
+            <View
+                style="@style/SepLineVertical"
+                android:layout_gravity="right"
+                android:layout_marginRight="40dp"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/section_five_order"
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_ask5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    app:title="卖5"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_ask4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="卖4"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_ask3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="卖3"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_ask2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="卖2"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_ask1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="卖1"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/BorderLineHorizontal"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_bid1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="买1"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_bid2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="买2"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_bid3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="买3"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_bid4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="买4"/>
+
+                <com.goldmf.GMFund.widget.FiveOrderCell
+                    android:id="@+id/cell_bid5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    app:title="买5"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layer_loading"/>
+
+    <include layout="@layout/frag_chart_reload"/>
+
+</FrameLayout>

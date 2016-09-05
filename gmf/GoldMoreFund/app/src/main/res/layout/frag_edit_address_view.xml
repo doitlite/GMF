@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/root"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gmf_act_bg"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        style="@style/CustomizeToolbar">
+
+        <TextView
+            style="@style/CustomizeToolbarTitle"
+            android:text="管理收货地址"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="10dp"
+        android:text="收货地址仅用于奖品发放，请放心填写。"
+        android:textColor="#999999"/>
+
+    <ScrollView
+        android:id="@+id/section_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/field_name"
+                style="@style/GMFEditText.Round"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="请输入姓名"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/field_phone"
+                style="@style/GMFEditText.Round"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="请输入电话"
+                android:imeOptions="actionNext"
+                android:inputType="phone"/>
+
+            <com.goldmf.GMFund.widget.BasicCell
+                android:id="@+id/cell_edit_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                app:extraTitle=""
+                app:hideArrow="false"
+                app:title="所在地区"/>
+
+            <EditText
+                android:id="@+id/field_detail_address"
+                style="@style/GMFEditText.Round"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="none"
+                android:gravity="left|top"
+                android:hint="请输入详细地址"
+                android:imeOptions="actionDone"
+                android:minLines="3"
+                android:paddingTop="16dp"
+                android:singleLine="false"/>
+
+            <com.goldmf.GMFund.widget.ProgressButton
+                android:id="@+id/btn_save"
+                android:layout_width="@dimen/gmf_button_width_large"
+                android:layout_height="@dimen/gmf_button_height_large"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                app:buttonTheme="yellow"
+                app:textSize="16sp"
+                app:text_for_loading="正在保存中..."
+                app:text_for_normal="保存收货地址"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

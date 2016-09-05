@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/section_header"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/gmf_white">
+
+        <TextView
+            android:id="@+id/label_invested_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="累计投资金额\n305,007.00"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/label_invested_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="136dp"
+            android:text="累计投资人次\n231,800"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+
+        <TextView
+            android:id="@+id/label_top_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="259dp"
+            android:text="累计投资人次\n231,800"
+            android:textColor="@color/gmf_text_grey"
+            android:textSize="12sp"/>
+
+        <View
+            style="@style/BorderLineVertical"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="112dp"/>
+
+
+        <View
+            style="@style/BorderLineVertical"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="240dp"/>
+
+
+        <View
+            style="@style/BorderLineHorizontal"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</merge>

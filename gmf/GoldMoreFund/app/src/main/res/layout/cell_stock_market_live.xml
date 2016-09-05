@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                               xmlns:app="http://schemas.android.com/apk/res-auto"
+                                               xmlns:tools="http://schemas.android.com/tools"
+                                               android:layout_width="match_parent"
+                                               android:layout_height="wrap_content"
+                                               tools:background="@color/gmf_act_bg">
+
+    <TextView
+        android:id="@+id/label_content"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="48dp"
+        android:paddingRight="16dp"
+        android:text="习近平：加强顶层设计完善重大政策制度 及时科学综合应对人口老龄化；财联社23日讯，习近平日前对加强老龄工作作出重要指示强调，有效应对我国人口老龄化，事关国家发展全局，要加强顶层设计，完善生育、就业、养老等重大政策和制度，做到及时应。"
+        android:textColor="#B3333333"
+        android:textSize="16sp"
+        app:layout_widthPercent="81%"/>
+
+    <FrameLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_alignBottom="@id/label_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/label_content">
+
+        <View
+            android:id="@+id/label_line"
+            android:layout_width="4dp"
+            android:layout_height="800dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#33F64046"/>
+
+        <TextView
+            android:id="@+id/label_time"
+            android:layout_width="40dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@color/gmf_red"
+            android:gravity="center"
+            android:text="16:34"
+            android:textColor="@color/gmf_text_white"
+            android:textSize="12sp"/>
+
+    </FrameLayout>
+
+</android.support.percent.PercentRelativeLayout>
